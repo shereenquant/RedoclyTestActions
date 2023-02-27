@@ -36,7 +36,7 @@ get:
           schema:
             $ref: ../components/schemas/User.yaml
           example:
-            username: user1
+            username: user2
             email: user@example.com
     '403':
       description: Forbidden
