@@ -1,0 +1,2157 @@
+# This file instructs Redocly's linter to ignore the rules contained for specific parts of your API.
+# See https://redoc.ly/docs/cli/ for more information.
+openapi.yaml:
+  info-license:
+    - '#/info'
+  tag-description:
+    - '#/tags/0/description'
+    - '#/tags/1/description'
+    - '#/tags/2/description'
+    - '#/tags/3/description'
+    - '#/tags/4/description'
+    - '#/tags/5/description'
+    - '#/tags/6/description'
+  operation-summary:
+    - '#/paths/~1v2~1nonfungibletoken/get/summary'
+    - '#/paths/~1v2~1token~1fungible/get/summary'
+  operation-4xx-response:
+    - '#/paths/~1v2~1nonfungibletoken/get/responses'
+    - '#/paths/~1v2~1token~1fungible/get/responses'
+  spec-components-invalid-map-name:
+    - >-
+      #/paths/~1v2~1preparation~1debit/post/requestBody/content/application~1json/examples/QRC20
+      Create Debit
+    - >-
+      #/paths/~1v2~1preparation~1debit/post/requestBody/content/application~1json/examples/QRC20
+      Approve Debit
+    - >-
+      #/paths/~1v2~1preparation~1debit/post/responses/200/content/application~1json/examples/Prepare
+      Response
+    - >-
+      #/paths/~1v2~1preparation~1debit/post/responses/400/content/application~1json/examples/Bad
+      Request
+    - >-
+      #/paths/~1v2~1preparation~1debit/post/responses/401/content/application~1json/examples/Bad
+      Request
+    - >-
+      #/paths/~1v2~1preparation~1debit/post/responses/500/content/application~1json/examples/500
+      Something went wrong on our side
+    - >-
+      #/paths/~1v2~1tokenise~1tokens~1qrc20~1secondary-account-owner/post/requestBody/content/application~1json/examples/Contract
+      Secondary Owner Of a QRC20 Token
+    - >-
+      #/paths/~1v2~1tokenise~1tokens~1qrc20~1secondary-account-owner/post/responses/200/content/application~1json/examples/Account
+      Balance Of a QRC20 Token Response
+    - >-
+      #/paths/~1v2~1tokenise~1tokens~1qrc20~1secondary-account-owner/post/responses/401/content/application~1json/examples/Not
+      Authorized
+    - >-
+      #/paths/~1v2~1tokenise~1tokens~1qrc20~1secondary-account-owner/post/responses/500/content/application~1json/examples/500
+      Something went wrong on our side
+    - >-
+      #/paths/~1v2~1tokenise~1tokens~1subscription~1qrc20~1credit/post/requestBody/content/application~1json/examples/Subscribe
+      To QRC20 Create Credit Event
+    - >-
+      #/paths/~1v2~1tokenise~1tokens~1subscription~1qrc20~1credit/post/responses/200/content/application~1json/examples/Create
+      Credit
+    - >-
+      #/paths/~1v2~1tokenise~1tokens~1subscription~1qrc20~1credit/post/responses/400/content/application~1json/examples/Bad
+      Request
+    - >-
+      #/paths/~1v2~1tokenise~1tokens~1subscription~1qrc20~1credit/post/responses/401/content/application~1json/examples/Bad
+      Request
+    - >-
+      #/paths/~1v2~1tokenise~1tokens~1subscription~1qrc20~1credit/post/responses/500/content/application~1json/examples/500
+      Something went wrong on our side
+    - >-
+      #/paths/~1v2~1tokenise~1preparation~1transaction~1qrc721~1supply/post/requestBody/content/application~1json/examples/QRC721
+      Burn Tokens
+    - >-
+      #/paths/~1v2~1tokenise~1preparation~1transaction~1qrc721~1supply/post/requestBody/content/application~1json/examples/QRC721
+      Mint Tokens
+    - >-
+      #/paths/~1v2~1tokenise~1preparation~1transaction~1qrc721~1supply/post/responses/200/content/application~1json/examples/Prepare
+      Supply Response
+    - >-
+      #/paths/~1v2~1tokenise~1preparation~1transaction~1qrc721~1supply/post/responses/401/content/application~1json/examples/Bad
+      Request
+    - >-
+      #/paths/~1v2~1tokenise~1preparation~1transaction~1qrc721~1supply/post/responses/500/content/application~1json/examples/500
+      Something went wrong on our side
+    - >-
+      #/paths/~1v2~1execution~1search~1smartcontract/post/responses/200/content/application~1json/examples/Execute
+      Response
+    - >-
+      #/paths/~1v2~1execution~1search~1smartcontract/post/responses/401/content/application~1json/examples/Not
+      Authorized
+    - >-
+      #/paths/~1v2~1execution~1search~1smartcontract/post/responses/404/content/application~1json/examples/Bad
+      Request
+    - >-
+      #/paths/~1v2~1execution~1search~1smartcontract/post/responses/500/content/application~1json/examples/500
+      Something went wrong on our side
+    - >-
+      #/paths/~1v2~1tokens~1fungible/get/responses/400/content/application~1json/examples/Bad
+      Request
+    - >-
+      #/paths/~1v2~1tokens~1fungible/get/responses/401/content/application~1json/examples/Bad
+      Request
+    - >-
+      #/paths/~1v2~1tokens~1fungible/get/responses/500/content/application~1json/examples/500
+      Something went wrong on our side
+    - >-
+      #/paths/~1v2~1execution~1search~1address~1sequence/post/responses/200/content/application~1json/examples/Execute
+      Response
+    - >-
+      #/paths/~1v2~1execution~1search~1address~1sequence/post/responses/401/content/application~1json/examples/Not
+      Authorized
+    - >-
+      #/paths/~1v2~1execution~1search~1address~1sequence/post/responses/404/content/application~1json/examples/Bad
+      Request
+    - >-
+      #/paths/~1v2~1execution~1search~1address~1sequence/post/responses/500/content/application~1json/examples/500
+      Something went wrong on our side
+    - >-
+      #/paths/~1v2~1tokenise~1tokens~1{flowType}~1current-supply/post/responses/200/content/application~1json/examples/Current
+      Supply Of a QRC721 Token Response
+    - >-
+      #/paths/~1v2~1tokenise~1tokens~1{flowType}~1current-supply/post/responses/400/content/application~1json/examples/Invalid
+      Request-Token Name
+    - >-
+      #/paths/~1v2~1tokenise~1tokens~1{flowType}~1current-supply/post/responses/401/content/application~1json/examples/Not
+      Authorized
+    - >-
+      #/paths/~1v2~1tokenise~1tokens~1{flowType}~1current-supply/post/responses/500/content/application~1json/examples/500
+      Something went wrong on our side
+    - >-
+      #/paths/~1v2~1execution~1search~1transaction/post/responses/200/content/application~1json/examples/Execute
+      Response
+    - >-
+      #/paths/~1v2~1execution~1search~1transaction/post/responses/400/content/application~1json/examples/Bad
+      Request
+    - >-
+      #/paths/~1v2~1execution~1search~1transaction/post/responses/401/content/application~1json/examples/Not
+      Authorized
+    - >-
+      #/paths/~1v2~1execution~1search~1transaction/post/responses/404/content/application~1json/examples/Bad
+      Request
+    - >-
+      #/paths/~1v2~1execution~1search~1transaction/post/responses/500/content/application~1json/examples/500
+      Something went wrong on our side
+    - >-
+      #/paths/~1v2~1tokenise~1tokens~1subscription~1qrc20~1debit/post/requestBody/content/application~1json/examples/Subscribe
+      To QRC20 Create Debit Event
+    - >-
+      #/paths/~1v2~1tokenise~1tokens~1subscription~1qrc20~1debit/post/requestBody/content/application~1json/examples/Subscribe
+      QRC20 Approve Debit Event
+    - >-
+      #/paths/~1v2~1tokenise~1tokens~1subscription~1qrc20~1debit/post/responses/200/content/application~1json/examples/Create
+      Debit
+    - >-
+      #/paths/~1v2~1tokenise~1tokens~1subscription~1qrc20~1debit/post/responses/200/content/application~1json/examples/Approve
+      Debit
+    - >-
+      #/paths/~1v2~1tokenise~1tokens~1subscription~1qrc20~1debit/post/responses/400/content/application~1json/examples/Bad
+      Request
+    - >-
+      #/paths/~1v2~1tokenise~1tokens~1subscription~1qrc20~1debit/post/responses/401/content/application~1json/examples/Bad
+      Request
+    - >-
+      #/paths/~1v2~1tokenise~1tokens~1subscription~1qrc20~1debit/post/responses/500/content/application~1json/examples/500
+      Something went wrong on our side
+    - >-
+      #/paths/~1v2~1autoexecution~1search~1transaction/post/parameters/1/examples/Ethereum
+      transactionId
+    - >-
+      #/paths/~1v2~1autoexecution~1search~1transaction/post/parameters/1/examples/XRP
+      Ledger transactionId
+    - >-
+      #/paths/~1v2~1autoexecution~1search~1transaction/post/parameters/1/examples/Substrate
+      transactionId
+    - >-
+      #/paths/~1v2~1autoexecution~1search~1transaction/post/parameters/1/examples/Bitcoin
+      transactionId
+    - >-
+      #/paths/~1v2~1autoexecution~1search~1transaction/post/parameters/1/examples/Polygon
+      transactionId
+    - >-
+      #/paths/~1v2~1autoexecution~1search~1transaction/post/parameters/1/examples/Hyperledger
+      Fabric transactionId
+    - >-
+      #/paths/~1v2~1autoexecution~1search~1transaction/post/requestBody/content/application~1json/examples/Prepare
+      And Execute Transaction Search
+    - >-
+      #/paths/~1v2~1autoexecution~1search~1transaction/post/responses/200/content/application~1json/examples/Successful
+      Prepare and Failed Execute Response
+    - >-
+      #/paths/~1v2~1autoexecution~1search~1transaction/post/responses/200/content/application~1json/examples/Successful
+      Prepare and Execute Response
+    - >-
+      #/paths/~1v2~1autoexecution~1search~1transaction/post/responses/400/content/application~1json/examples/Bad
+      Request
+    - >-
+      #/paths/~1v2~1autoexecution~1search~1transaction/post/responses/401/content/application~1json/examples/Not
+      Authorized
+    - >-
+      #/paths/~1v2~1autoexecution~1search~1transaction/post/responses/404/content/application~1json/examples/Bad
+      Request
+    - >-
+      #/paths/~1v2~1autoexecution~1search~1transaction/post/responses/500/content/application~1json/examples/500
+      Something went wrong on our side
+    - >-
+      #/paths/~1v2~1preparation~1search~1utxo~1{utxoId}/post/requestBody/content/application~1json/examples/UTXO
+      Transaction Search
+    - >-
+      #/paths/~1v2~1preparation~1search~1utxo~1{utxoId}/post/responses/200/content/application~1json/examples/Prepare
+      Response
+    - >-
+      #/paths/~1v2~1preparation~1search~1utxo~1{utxoId}/post/responses/401/content/application~1json/examples/Bad
+      Request
+    - >-
+      #/paths/~1v2~1preparation~1search~1utxo~1{utxoId}/post/responses/500/content/application~1json/examples/500
+      Something went wrong on our side
+    - >-
+      #/paths/~1v2~1tokenise~1tokens~1subscription~1qrc20~1secondaryaccountowner/post/requestBody/content/application~1json/examples/Subscribe
+      To QRC20 Add Secondary Owner Event
+    - >-
+      #/paths/~1v2~1tokenise~1tokens~1subscription~1qrc20~1secondaryaccountowner/post/requestBody/content/application~1json/examples/Subscribe
+      To QRC20 Secondary Owner Credit Event
+    - >-
+      #/paths/~1v2~1tokenise~1tokens~1subscription~1qrc20~1secondaryaccountowner/post/requestBody/content/application~1json/examples/Subscribe
+      To QRC20 Remove Secondary Owner Event
+    - >-
+      #/paths/~1v2~1tokenise~1tokens~1subscription~1qrc20~1secondaryaccountowner/post/responses/200/content/application~1json/examples/Add
+      Account
+    - >-
+      #/paths/~1v2~1tokenise~1tokens~1subscription~1qrc20~1secondaryaccountowner/post/responses/200/content/application~1json/examples/Remove
+      Account
+    - >-
+      #/paths/~1v2~1tokenise~1tokens~1subscription~1qrc20~1secondaryaccountowner/post/responses/200/content/application~1json/examples/Create
+      Credit
+    - >-
+      #/paths/~1v2~1tokenise~1tokens~1subscription~1qrc20~1secondaryaccountowner/post/responses/400/content/application~1json/examples/Bad
+      Request
+    - >-
+      #/paths/~1v2~1tokenise~1tokens~1subscription~1qrc20~1secondaryaccountowner/post/responses/401/content/application~1json/examples/Bad
+      Request
+    - >-
+      #/paths/~1v2~1tokenise~1tokens~1subscription~1qrc20~1secondaryaccountowner/post/responses/500/content/application~1json/examples/500
+      Something went wrong on our side
+    - >-
+      #/paths/~1v2~1tokenise~1tokens~1qrc721~1token-owner/post/requestBody/content/application~1json/examples/Token
+      Owner Of a QRC721 Token
+    - >-
+      #/paths/~1v2~1tokenise~1tokens~1qrc721~1token-owner/post/responses/200/content/application~1json/examples/Token
+      Owner Of a QRC721 Token Response
+    - >-
+      #/paths/~1v2~1tokenise~1tokens~1qrc721~1token-owner/post/responses/400/content/application~1json/examples/Invalid
+      Request-Token Name
+    - >-
+      #/paths/~1v2~1tokenise~1tokens~1qrc721~1token-owner/post/responses/401/content/application~1json/examples/Not
+      Authorized
+    - >-
+      #/paths/~1v2~1tokenise~1tokens~1qrc721~1token-owner/post/responses/500/content/application~1json/examples/500
+      Something went wrong on our side
+    - >-
+      #/paths/~1v2~1webhook~1subscription~1{subscriptionId}/delete/responses/200/content/application~1json/examples/200
+      Delete Successful
+    - >-
+      #/paths/~1v2~1webhook~1subscription~1{subscriptionId}/delete/responses/401/content/application~1json/examples/Not
+      Authorized
+    - >-
+      #/paths/~1v2~1webhook~1subscription~1{subscriptionId}/delete/responses/404/content/application~1json/examples/404
+      Not Found
+    - >-
+      #/paths/~1v2~1webhook~1subscription~1{subscriptionId}/delete/responses/500/content/application~1json/examples/500
+      Something went wrong on our side
+    - >-
+      #/paths/~1v2~1webhook~1subscription~1{subscriptionId}/patch/requestBody/content/application~1json/examples/Update
+      Subscription
+    - >-
+      #/paths/~1v2~1webhook~1subscription~1{subscriptionId}/patch/responses/200/content/application~1json/examples/200
+      Update Success
+    - >-
+      #/paths/~1v2~1webhook~1subscription~1{subscriptionId}/patch/responses/401/content/application~1json/examples/Not
+      Authorized
+    - >-
+      #/paths/~1v2~1webhook~1subscription~1{subscriptionId}/patch/responses/404/content/application~1json/examples/404
+      Not Found
+    - >-
+      #/paths/~1v2~1webhook~1subscription~1{subscriptionId}/patch/responses/405/content/application~1json/examples/405
+      Method is not allowed
+    - >-
+      #/paths/~1v2~1webhook~1subscription~1{subscriptionId}/patch/responses/500/content/application~1json/examples/500
+      Something went wrong on our side
+    - >-
+      #/paths/~1v2~1preparation~1search~1address~1sequence~1{addressId}/post/requestBody/content/application~1json/examples/Address
+      Sequence Search
+    - >-
+      #/paths/~1v2~1preparation~1search~1address~1sequence~1{addressId}/post/responses/200/content/application~1json/examples/Prepare
+      Response
+    - >-
+      #/paths/~1v2~1preparation~1search~1address~1sequence~1{addressId}/post/responses/401/content/application~1json/examples/Bad
+      Request
+    - >-
+      #/paths/~1v2~1preparation~1search~1address~1sequence~1{addressId}/post/responses/500/content/application~1json/examples/500
+      Something went wrong on our side
+    - >-
+      #/paths/~1v2~1preparation~1transaction/post/requestBody/content/application~1json/examples/ERC20
+      Payment
+    - >-
+      #/paths/~1v2~1preparation~1transaction/post/requestBody/content/application~1json/examples/ERC721
+      Transfer
+    - >-
+      #/paths/~1v2~1preparation~1transaction/post/requestBody/content/application~1json/examples/Smart
+      Contract Invoke
+    - >-
+      #/paths/~1v2~1preparation~1transaction/post/requestBody/content/application~1json/examples/Smart
+      Contract Invoke - Getting Test QNT
+    - >-
+      #/paths/~1v2~1preparation~1transaction/post/requestBody/content/application~1json/examples/XRP
+      Ledger
+    - >-
+      #/paths/~1v2~1preparation~1transaction/post/responses/200/content/application~1json/examples/Prepare
+      Response
+    - >-
+      #/paths/~1v2~1preparation~1transaction/post/responses/400/content/application~1json/examples/Bad
+      Request
+    - >-
+      #/paths/~1v2~1preparation~1transaction/post/responses/401/content/application~1json/examples/Bad
+      Request
+    - >-
+      #/paths/~1v2~1preparation~1transaction/post/responses/500/content/application~1json/examples/500
+      Something went wrong on our side
+    - >-
+      #/paths/~1v2~1resourcemonitoring~1address/post/requestBody/content/application~1json/examples/Monitor
+      Address
+    - >-
+      #/paths/~1v2~1resourcemonitoring~1address/post/responses/200/content/application~1json/examples/Create
+      Resource Monitoring
+    - >-
+      #/paths/~1v2~1resourcemonitoring~1address/post/responses/401/content/application~1json/examples/Not
+      Authorized
+    - >-
+      #/paths/~1v2~1resourcemonitoring~1address/post/responses/500/content/application~1json/examples/500
+      Something went wrong on our side
+    - >-
+      #/paths/~1v2~1tokenise~1preparation~1transaction~1qrc721~1transfer/post/requestBody/content/application~1json/examples/ERC20
+      Payment
+    - >-
+      #/paths/~1v2~1tokenise~1preparation~1transaction~1qrc721~1transfer/post/requestBody/content/application~1json/examples/ERC721
+      Transfer
+    - >-
+      #/paths/~1v2~1tokenise~1preparation~1transaction~1qrc721~1transfer/post/requestBody/content/application~1json/examples/Smart
+      Contract Invoke
+    - >-
+      #/paths/~1v2~1tokenise~1preparation~1transaction~1qrc721~1transfer/post/requestBody/content/application~1json/examples/XRP
+      Ledger
+    - >-
+      #/paths/~1v2~1tokenise~1preparation~1transaction~1qrc721~1transfer/post/responses/200/content/application~1json/examples/Prepare
+      Transfer Response
+    - >-
+      #/paths/~1v2~1tokenise~1preparation~1transaction~1qrc721~1transfer/post/responses/400/content/application~1json/examples/Bad
+      Request
+    - >-
+      #/paths/~1v2~1tokenise~1preparation~1transaction~1qrc721~1transfer/post/responses/401/content/application~1json/examples/Bad
+      Request
+    - >-
+      #/paths/~1v2~1tokenise~1preparation~1transaction~1qrc721~1transfer/post/responses/500/content/application~1json/examples/500
+      Something went wrong on our side
+    - >-
+      #/paths/~1v2~1resourcemonitoring~1smartcontractevent~1{resourceMonitoringId}/get/responses/200/content/application~1json/examples/Get
+      Resource Monitoring Details
+    - >-
+      #/paths/~1v2~1resourcemonitoring~1smartcontractevent~1{resourceMonitoringId}/get/responses/401/content/application~1json/examples/Not
+      Authorized
+    - >-
+      #/paths/~1v2~1resourcemonitoring~1smartcontractevent~1{resourceMonitoringId}/get/responses/500/content/application~1json/examples/500
+      Something went wrong on our side
+    - >-
+      #/paths/~1v2~1resourcemonitoring~1smartcontractevent~1{resourceMonitoringId}/delete/responses/200/content/application~1json/examples/Update
+      Monitoring
+    - >-
+      #/paths/~1v2~1resourcemonitoring~1smartcontractevent~1{resourceMonitoringId}/delete/responses/401/content/application~1json/examples/Not
+      Authorized
+    - >-
+      #/paths/~1v2~1resourcemonitoring~1smartcontractevent~1{resourceMonitoringId}/delete/responses/500/content/application~1json/examples/500
+      Something went wrong on our side
+    - >-
+      #/paths/~1v2~1resourcemonitoring~1smartcontractevent~1{resourceMonitoringId}/patch/requestBody/content/application~1json/examples/Update
+      Monitoring
+    - >-
+      #/paths/~1v2~1resourcemonitoring~1smartcontractevent~1{resourceMonitoringId}/patch/responses/200/content/application~1json/examples/Update
+      Monitoring
+    - >-
+      #/paths/~1v2~1resourcemonitoring~1smartcontractevent~1{resourceMonitoringId}/patch/responses/401/content/application~1json/examples/Not
+      Authorized
+    - >-
+      #/paths/~1v2~1resourcemonitoring~1smartcontractevent~1{resourceMonitoringId}/patch/responses/500/content/application~1json/examples/500
+      Something went wrong on our side
+    - >-
+      #/paths/~1v2~1preparation~1search~1block~1{blockId}/post/parameters/1/examples/Block
+      Hash
+    - >-
+      #/paths/~1v2~1preparation~1search~1block~1{blockId}/post/parameters/1/examples/Latest
+      Block
+    - >-
+      #/paths/~1v2~1preparation~1search~1block~1{blockId}/post/requestBody/content/application~1json/examples/Block
+      Search
+    - >-
+      #/paths/~1v2~1preparation~1search~1block~1{blockId}/post/responses/200/content/application~1json/examples/Prepare
+      Response
+    - >-
+      #/paths/~1v2~1preparation~1search~1block~1{blockId}/post/responses/401/content/application~1json/examples/Bad
+      Request
+    - >-
+      #/paths/~1v2~1preparation~1search~1block~1{blockId}/post/responses/500/content/application~1json/examples/500
+      Something went wrong on our side
+    - >-
+      #/paths/~1v2~1mdapptransaction~1{overledgertransactionid}/get/responses/200/content/application~1json/examples/Overledger
+      Transaction
+    - >-
+      #/paths/~1v2~1mdapptransaction~1{overledgertransactionid}/get/responses/401/content/application~1json/examples/Not
+      Authorized
+    - >-
+      #/paths/~1v2~1mdapptransaction~1{overledgertransactionid}/get/responses/404/content/application~1json/examples/404
+      Not Found
+    - >-
+      #/paths/~1v2~1mdapptransaction~1{overledgertransactionid}/get/responses/500/content/application~1json/examples/500
+      Something went wrong on our side
+    - >-
+      #/paths/~1v2~1resourcemonitoring~1address~1{resourceMonitoringId}/get/responses/200/content/application~1json/examples/Get
+      Resource Monitoring
+    - >-
+      #/paths/~1v2~1resourcemonitoring~1address~1{resourceMonitoringId}/get/responses/401/content/application~1json/examples/Not
+      Authorized
+    - >-
+      #/paths/~1v2~1resourcemonitoring~1address~1{resourceMonitoringId}/get/responses/500/content/application~1json/examples/500
+      Something went wrong on our side
+    - >-
+      #/paths/~1v2~1resourcemonitoring~1address~1{resourceMonitoringId}/delete/responses/200/content/application~1json/examples/Delete
+      Resource Monitoring
+    - >-
+      #/paths/~1v2~1resourcemonitoring~1address~1{resourceMonitoringId}/delete/responses/401/content/application~1json/examples/Not
+      Authorized
+    - >-
+      #/paths/~1v2~1resourcemonitoring~1address~1{resourceMonitoringId}/delete/responses/500/content/application~1json/examples/500
+      Something went wrong on our side
+    - >-
+      #/paths/~1v2~1resourcemonitoring~1address~1{resourceMonitoringId}/patch/requestBody/content/application~1json/examples/Update
+      Monitoring
+    - >-
+      #/paths/~1v2~1resourcemonitoring~1address~1{resourceMonitoringId}/patch/responses/200/content/application~1json/examples/Update
+      Resource Monitoring
+    - >-
+      #/paths/~1v2~1resourcemonitoring~1address~1{resourceMonitoringId}/patch/responses/401/content/application~1json/examples/Not
+      Authorized
+    - >-
+      #/paths/~1v2~1resourcemonitoring~1address~1{resourceMonitoringId}/patch/responses/500/content/application~1json/examples/500
+      Something went wrong on our side
+    - >-
+      #/paths/~1v2~1resourcemonitoring~1addresses/get/responses/200/content/application~1json/examples/List
+      Resource Monitoring
+    - >-
+      #/paths/~1v2~1resourcemonitoring~1addresses/get/responses/401/content/application~1json/examples/Not
+      Authorized
+    - >-
+      #/paths/~1v2~1resourcemonitoring~1addresses/get/responses/500/content/application~1json/examples/500
+      Something went wrong on our side
+    - >-
+      #/paths/~1v2~1resourcemonitoring~1smartcontractevent/post/requestBody/content/application~1json/examples/Monitor
+      Smart Contract
+    - >-
+      #/paths/~1v2~1resourcemonitoring~1smartcontractevent/post/responses/200/content/application~1json/examples/Create
+      Smart Contract Monitoring
+    - >-
+      #/paths/~1v2~1resourcemonitoring~1smartcontractevent/post/responses/401/content/application~1json/examples/Not
+      Authorized
+    - >-
+      #/paths/~1v2~1resourcemonitoring~1smartcontractevent/post/responses/500/content/application~1json/examples/500
+      Something went wrong on our side
+    - >-
+      #/paths/~1v2~1tokenise~1tokens~1nonfungible/get/responses/400/content/application~1json/examples/Bad
+      Request
+    - >-
+      #/paths/~1v2~1tokenise~1tokens~1nonfungible/get/responses/401/content/application~1json/examples/Bad
+      Request
+    - >-
+      #/paths/~1v2~1tokenise~1tokens~1nonfungible/get/responses/500/content/application~1json/examples/500
+      Something went wrong on our side
+    - >-
+      #/paths/~1v2~1execution~1nativetransaction/post/requestBody/content/application~1json/examples/Execute
+      Native Transaction
+    - >-
+      #/paths/~1v2~1execution~1nativetransaction/post/responses/200/content/application~1json/examples/Execute
+      Response
+    - >-
+      #/paths/~1v2~1execution~1nativetransaction/post/responses/401/content/application~1json/examples/Not
+      Authorized
+    - >-
+      #/paths/~1v2~1execution~1nativetransaction/post/responses/404/content/application~1json/examples/Bad
+      Request
+    - >-
+      #/paths/~1v2~1execution~1nativetransaction/post/responses/500/content/application~1json/examples/500
+      Something went wrong on our side
+    - >-
+      #/paths/~1v2~1webhook~1subscriptions/get/responses/200/content/application~1json/examples/200
+      List Subscriptions
+    - >-
+      #/paths/~1v2~1webhook~1subscriptions/get/responses/204/content/application~1json/examples/204
+      No Content
+    - >-
+      #/paths/~1v2~1webhook~1subscriptions/get/responses/401/content/application~1json/examples/Not
+      Authorized
+    - >-
+      #/paths/~1v2~1webhook~1subscriptions/get/responses/500/content/application~1json/examples/500
+      Something went wrong on our side
+    - >-
+      #/paths/~1v2~1preparation~1search~1transaction/post/parameters/1/examples/Ethereum
+      transactionId
+    - >-
+      #/paths/~1v2~1preparation~1search~1transaction/post/parameters/1/examples/XRP
+      Ledger transactionId
+    - >-
+      #/paths/~1v2~1preparation~1search~1transaction/post/parameters/1/examples/Substrate
+      transactionId
+    - >-
+      #/paths/~1v2~1preparation~1search~1transaction/post/parameters/1/examples/Bitcoin
+      transactionId
+    - >-
+      #/paths/~1v2~1preparation~1search~1transaction/post/parameters/1/examples/Polygon
+      transactionId
+    - >-
+      #/paths/~1v2~1preparation~1search~1transaction/post/parameters/1/examples/Hyperledger
+      Fabric transactionId
+    - >-
+      #/paths/~1v2~1preparation~1search~1transaction/post/requestBody/content/application~1json/examples/Transaction
+      Search
+    - >-
+      #/paths/~1v2~1preparation~1search~1transaction/post/responses/200/content/application~1json/examples/Prepare
+      Response
+    - >-
+      #/paths/~1v2~1preparation~1search~1transaction/post/responses/401/content/application~1json/examples/Bad
+      Request
+    - >-
+      #/paths/~1v2~1preparation~1search~1transaction/post/responses/500/content/application~1json/examples/500
+      Something went wrong on our side
+    - >-
+      #/paths/~1v2~1tokenise~1tokens~1subscription~1qrc721~1transfer/post/requestBody/content/application~1json/examples/Subscribe
+      QRC721 Transfer event
+    - >-
+      #/paths/~1v2~1tokenise~1tokens~1subscription~1qrc721~1transfer/post/responses/200/content/application~1json/examples/Create
+      Transfer
+    - >-
+      #/paths/~1v2~1tokenise~1tokens~1subscription~1qrc721~1transfer/post/responses/400/content/application~1json/examples/Bad
+      Request
+    - >-
+      #/paths/~1v2~1tokenise~1tokens~1subscription~1qrc721~1transfer/post/responses/401/content/application~1json/examples/Bad
+      Request
+    - >-
+      #/paths/~1v2~1tokenise~1tokens~1subscription~1qrc721~1transfer/post/responses/500/content/application~1json/examples/500
+      Something went wrong on our side
+    - >-
+      #/paths/~1v2~1preparation~1search~1smartcontract/post/requestBody/content/application~1json/examples/Smart
+      Contract Search
+    - >-
+      #/paths/~1v2~1preparation~1search~1smartcontract/post/responses/200/content/application~1json/examples/Prepare
+      Response
+    - >-
+      #/paths/~1v2~1preparation~1search~1smartcontract/post/responses/401/content/application~1json/examples/Bad
+      Request
+    - >-
+      #/paths/~1v2~1preparation~1search~1smartcontract/post/responses/500/content/application~1json/examples/500
+      Something went wrong on our side
+    - >-
+      #/paths/~1v2~1execution~1search~1address~1balance/post/responses/200/content/application~1json/examples/Execute
+      Response
+    - >-
+      #/paths/~1v2~1execution~1search~1address~1balance/post/responses/401/content/application~1json/examples/Not
+      Authorized
+    - >-
+      #/paths/~1v2~1execution~1search~1address~1balance/post/responses/404/content/application~1json/examples/Bad
+      Request
+    - >-
+      #/paths/~1v2~1execution~1search~1address~1balance/post/responses/500/content/application~1json/examples/500
+      Something went wrong on our side
+    - >-
+      #/paths/~1v2~1preparation~1secondaryaccountowner/post/requestBody/content/application~1json/examples/QRC20
+      Secondary Account Credit Transaction
+    - >-
+      #/paths/~1v2~1preparation~1secondaryaccountowner/post/requestBody/content/application~1json/examples/QRC20
+      Add Secondary Account
+    - >-
+      #/paths/~1v2~1preparation~1secondaryaccountowner/post/requestBody/content/application~1json/examples/QRC20
+      Remove Secondary Account
+    - >-
+      #/paths/~1v2~1preparation~1secondaryaccountowner/post/responses/200/content/application~1json/examples/Prepare
+      Response
+    - >-
+      #/paths/~1v2~1preparation~1secondaryaccountowner/post/responses/400/content/application~1json/examples/Bad
+      Request
+    - >-
+      #/paths/~1v2~1preparation~1secondaryaccountowner/post/responses/401/content/application~1json/examples/Bad
+      Request
+    - >-
+      #/paths/~1v2~1preparation~1secondaryaccountowner/post/responses/500/content/application~1json/examples/500
+      Something went wrong on our side
+    - >-
+      #/paths/~1v2~1autoexecution~1search~1address~1sequence~1{addressId}/post/requestBody/content/application~1json/examples/Address
+      Sequence Search
+    - >-
+      #/paths/~1v2~1autoexecution~1search~1address~1sequence~1{addressId}/post/responses/200/content/application~1json/examples/Successful
+      Prepare and Address not found Execute Response
+    - >-
+      #/paths/~1v2~1autoexecution~1search~1address~1sequence~1{addressId}/post/responses/200/content/application~1json/examples/Successful
+      Prepare and Failed Execute Response
+    - >-
+      #/paths/~1v2~1autoexecution~1search~1address~1sequence~1{addressId}/post/responses/200/content/application~1json/examples/Successful
+      Prepare and Execute Response
+    - >-
+      #/paths/~1v2~1autoexecution~1search~1address~1sequence~1{addressId}/post/responses/400/content/application~1json/examples/Address
+      not valid
+    - >-
+      #/paths/~1v2~1autoexecution~1search~1address~1sequence~1{addressId}/post/responses/400/content/application~1json/examples/Bitcoin
+      not supported
+    - >-
+      #/paths/~1v2~1autoexecution~1search~1address~1sequence~1{addressId}/post/responses/400/content/application~1json/examples/Address
+      id param must be provided
+    - >-
+      #/paths/~1v2~1autoexecution~1search~1address~1sequence~1{addressId}/post/responses/400/content/application~1json/examples/Technology
+      or network not supported
+    - >-
+      #/paths/~1v2~1autoexecution~1search~1address~1sequence~1{addressId}/post/responses/401/content/application~1json/examples/Not
+      Authorized
+    - >-
+      #/paths/~1v2~1autoexecution~1search~1address~1sequence~1{addressId}/post/responses/500/content/application~1json/examples/500
+      Something went wrong on our side
+    - >-
+      #/paths/~1v2~1autoexecution~1search~1address~1balance~1{addressId}/post/requestBody/content/application~1json/examples/Address
+      Balance Search
+    - >-
+      #/paths/~1v2~1autoexecution~1search~1address~1balance~1{addressId}/post/responses/200/content/application~1json/examples/Successful
+      Prepare and Address not found Execute Response
+    - >-
+      #/paths/~1v2~1autoexecution~1search~1address~1balance~1{addressId}/post/responses/200/content/application~1json/examples/Successful
+      Prepare and Failed Execute Response
+    - >-
+      #/paths/~1v2~1autoexecution~1search~1address~1balance~1{addressId}/post/responses/200/content/application~1json/examples/Successful
+      Prepare and Execute Response
+    - >-
+      #/paths/~1v2~1autoexecution~1search~1address~1balance~1{addressId}/post/responses/400/content/application~1json/examples/Address
+      not valid
+    - >-
+      #/paths/~1v2~1autoexecution~1search~1address~1balance~1{addressId}/post/responses/400/content/application~1json/examples/Bitcoin
+      not supported
+    - >-
+      #/paths/~1v2~1autoexecution~1search~1address~1balance~1{addressId}/post/responses/400/content/application~1json/examples/Address
+      id param must be provided
+    - >-
+      #/paths/~1v2~1autoexecution~1search~1address~1balance~1{addressId}/post/responses/400/content/application~1json/examples/Technology
+      or network not supported
+    - >-
+      #/paths/~1v2~1autoexecution~1search~1address~1balance~1{addressId}/post/responses/401/content/application~1json/examples/Not
+      Authorized
+    - >-
+      #/paths/~1v2~1autoexecution~1search~1address~1balance~1{addressId}/post/responses/500/content/application~1json/examples/500
+      Something went wrong on our side
+    - >-
+      #/paths/~1v2~1autoexecution~1search~1smartcontract/post/requestBody/content/application~1json/examples/Smart
+      contract query Search
+    - >-
+      #/paths/~1v2~1autoexecution~1search~1smartcontract/post/responses/200/content/application~1json/examples/Successful
+      Prepare and Failed Execute Response
+    - >-
+      #/paths/~1v2~1autoexecution~1search~1smartcontract/post/responses/200/content/application~1json/examples/Successful
+      Prepare and Smart Contract not found Execute Response
+    - >-
+      #/paths/~1v2~1autoexecution~1search~1smartcontract/post/responses/200/content/application~1json/examples/Successful
+      Prepare and Execute Response
+    - >-
+      #/paths/~1v2~1autoexecution~1search~1smartcontract/post/responses/400/content/application~1json/examples/Bitcoin
+      not supported
+    - >-
+      #/paths/~1v2~1autoexecution~1search~1smartcontract/post/responses/400/content/application~1json/examples/Network
+      is required
+    - >-
+      #/paths/~1v2~1autoexecution~1search~1smartcontract/post/responses/400/content/application~1json/examples/OutputParameters
+      type not supported
+    - >-
+      #/paths/~1v2~1autoexecution~1search~1smartcontract/post/responses/400/content/application~1json/examples/InputParameters
+      type not supported
+    - >-
+      #/paths/~1v2~1autoexecution~1search~1smartcontract/post/responses/400/content/application~1json/examples/Technology
+      is required
+    - >-
+      #/paths/~1v2~1autoexecution~1search~1smartcontract/post/responses/400/content/application~1json/examples/SmartContract
+      Id is required
+    - >-
+      #/paths/~1v2~1autoexecution~1search~1smartcontract/post/responses/400/content/application~1json/examples/InputParameters
+      type is required
+    - >-
+      #/paths/~1v2~1autoexecution~1search~1smartcontract/post/responses/400/content/application~1json/examples/Function
+      name invalid pattern
+    - >-
+      #/paths/~1v2~1autoexecution~1search~1smartcontract/post/responses/400/content/application~1json/examples/Function
+      name is required
+    - >-
+      #/paths/~1v2~1autoexecution~1search~1smartcontract/post/responses/400/content/application~1json/examples/Technology
+      or network not supported
+    - >-
+      #/paths/~1v2~1autoexecution~1search~1smartcontract/post/responses/400/content/application~1json/examples/smartContract
+      Id size limitation
+    - >-
+      #/paths/~1v2~1autoexecution~1search~1smartcontract/post/responses/400/content/application~1json/examples/InputParameters
+      value is required
+    - >-
+      #/paths/~1v2~1autoexecution~1search~1smartcontract/post/responses/400/content/application~1json/examples/smartContract
+      Id invalid pattern
+    - >-
+      #/paths/~1v2~1autoexecution~1search~1smartcontract/post/responses/400/content/application~1json/examples/OutputParameters
+      type is required
+    - >-
+      #/paths/~1v2~1autoexecution~1search~1smartcontract/post/responses/401/content/application~1json/examples/Not
+      Authorized
+    - >-
+      #/paths/~1v2~1autoexecution~1search~1smartcontract/post/responses/500/content/application~1json/examples/500
+      Something went wrong on our side
+    - >-
+      #/paths/~1v2~1resourcemonitoring~1smartcontractevents/get/responses/200/content/application~1json/examples/List
+      Resource Monitoring
+    - >-
+      #/paths/~1v2~1resourcemonitoring~1smartcontractevents/get/responses/401/content/application~1json/examples/Not
+      Authorized
+    - >-
+      #/paths/~1v2~1resourcemonitoring~1smartcontractevents/get/responses/500/content/application~1json/examples/500
+      Something went wrong on our side
+    - >-
+      #/paths/~1v2~1tokenise~1tokens~1{flowType}~1contract-owner/post/responses/200/content/application~1json/examples/Contract
+      Owner Of a QRC721 Token Response
+    - >-
+      #/paths/~1v2~1tokenise~1tokens~1{flowType}~1contract-owner/post/responses/400/content/application~1json/examples/Invalid
+      Request-Token Name
+    - >-
+      #/paths/~1v2~1tokenise~1tokens~1{flowType}~1contract-owner/post/responses/401/content/application~1json/examples/Not
+      Authorized
+    - >-
+      #/paths/~1v2~1tokenise~1tokens~1{flowType}~1contract-owner/post/responses/500/content/application~1json/examples/500
+      Something went wrong on our side
+    - >-
+      #/paths/~1v2~1tokenise~1tokens~1qrc721~1approved-account/post/requestBody/content/application~1json/examples/Approved
+      Account Of a QRC721 Token
+    - >-
+      #/paths/~1v2~1tokenise~1tokens~1qrc721~1approved-account/post/responses/200/content/application~1json/examples/Approved
+      Account Of a QRC721 Token Response
+    - >-
+      #/paths/~1v2~1tokenise~1tokens~1qrc721~1approved-account/post/responses/400/content/application~1json/examples/Invalid
+      Request-Token Name
+    - >-
+      #/paths/~1v2~1tokenise~1tokens~1qrc721~1approved-account/post/responses/401/content/application~1json/examples/Not
+      Authorized
+    - >-
+      #/paths/~1v2~1tokenise~1tokens~1qrc721~1approved-account/post/responses/500/content/application~1json/examples/500
+      Something went wrong on our side
+    - >-
+      #/paths/~1v2~1tokenise~1tokens~1subscription~1qrc721~1collect/post/requestBody/content/application~1json/examples/Subscribe
+      QRC721 Approve Asset Collect event
+    - >-
+      #/paths/~1v2~1tokenise~1tokens~1subscription~1qrc721~1collect/post/requestBody/content/application~1json/examples/Subscribe
+      QRC721 Collect Asset Event
+    - >-
+      #/paths/~1v2~1tokenise~1tokens~1subscription~1qrc721~1collect/post/responses/200/content/application~1json/examples/Approve
+      Asset Collect
+    - >-
+      #/paths/~1v2~1tokenise~1tokens~1subscription~1qrc721~1collect/post/responses/400/content/application~1json/examples/Bad
+      Request
+    - >-
+      #/paths/~1v2~1tokenise~1tokens~1subscription~1qrc721~1collect/post/responses/401/content/application~1json/examples/Bad
+      Request
+    - >-
+      #/paths/~1v2~1tokenise~1tokens~1subscription~1qrc721~1collect/post/responses/500/content/application~1json/examples/500
+      Something went wrong on our side
+    - >-
+      #/paths/~1v2~1execution~1search~1block/post/responses/200/content/application~1json/examples/Execute
+      Response
+    - >-
+      #/paths/~1v2~1execution~1search~1block/post/responses/401/content/application~1json/examples/Not
+      Authorized
+    - >-
+      #/paths/~1v2~1execution~1search~1block/post/responses/404/content/application~1json/examples/Bad
+      Request
+    - >-
+      #/paths/~1v2~1execution~1search~1block/post/responses/500/content/application~1json/examples/500
+      Something went wrong on our side
+    - >-
+      #/paths/~1v2~1mdapptransactions/get/responses/200/content/application~1json/examples/List
+      Overledger Transactions
+    - >-
+      #/paths/~1v2~1mdapptransactions/get/responses/401/content/application~1json/examples/Not
+      Authorized
+    - >-
+      #/paths/~1v2~1mdapptransactions/get/responses/500/content/application~1json/examples/500
+      Something went wrong on our side
+    - >-
+      #/paths/~1v2~1execution~1transaction/post/requestBody/content/application~1json/examples/Execute
+      Transaction
+    - >-
+      #/paths/~1v2~1execution~1transaction/post/responses/200/content/application~1json/examples/Smart
+      Contract Invoke
+    - >-
+      #/paths/~1v2~1execution~1transaction/post/responses/200/content/application~1json/examples/XRP
+      Ledger
+    - >-
+      #/paths/~1v2~1execution~1transaction/post/responses/401/content/application~1json/examples/Not
+      Authorized
+    - >-
+      #/paths/~1v2~1execution~1transaction/post/responses/404/content/application~1json/examples/Bad
+      Request
+    - >-
+      #/paths/~1v2~1execution~1transaction/post/responses/500/content/application~1json/examples/500
+      Something went wrong on our side
+    - >-
+      #/paths/~1v2~1preparation~1nativetransaction/post/requestBody/content/application~1json/examples/Native
+      Transaction
+    - >-
+      #/paths/~1v2~1preparation~1nativetransaction/post/responses/200/content/application~1json/examples/Prepare
+      Response
+    - >-
+      #/paths/~1v2~1preparation~1nativetransaction/post/responses/401/content/application~1json/examples/Bad
+      Request
+    - >-
+      #/paths/~1v2~1preparation~1nativetransaction/post/responses/500/content/application~1json/examples/500
+      Something went wrong on our side
+    - >-
+      #/paths/~1v2~1preparation~1search~1address~1balance~1{addressId}/post/requestBody/content/application~1json/examples/Address
+      Balance Search
+    - >-
+      #/paths/~1v2~1preparation~1search~1address~1balance~1{addressId}/post/responses/200/content/application~1json/examples/Prepare
+      Response
+    - >-
+      #/paths/~1v2~1preparation~1search~1address~1balance~1{addressId}/post/responses/401/content/application~1json/examples/Bad
+      Request
+    - >-
+      #/paths/~1v2~1preparation~1search~1address~1balance~1{addressId}/post/responses/500/content/application~1json/examples/500
+      Something went wrong on our side
+    - >-
+      #/paths/~1v2~1resourcemonitoring/get/responses/200/content/application~1json/examples/List
+      Resource Monitoring
+    - >-
+      #/paths/~1v2~1resourcemonitoring/get/responses/401/content/application~1json/examples/Not
+      Authorized
+    - >-
+      #/paths/~1v2~1resourcemonitoring/get/responses/500/content/application~1json/examples/500
+      Something went wrong on our side
+    - >-
+      #/paths/~1v2~1tokenise~1tokens~1qrc20~1account-balance/post/requestBody/content/application~1json/examples/Account
+      balance for a QRC20 token
+    - >-
+      #/paths/~1v2~1tokenise~1tokens~1qrc20~1account-balance/post/responses/200/content/application~1json/examples/Account
+      Balance Of a QRC20 Token Response
+    - >-
+      #/paths/~1v2~1tokenise~1tokens~1qrc20~1account-balance/post/responses/401/content/application~1json/examples/Not
+      Authorized
+    - >-
+      #/paths/~1v2~1tokenise~1tokens~1qrc20~1account-balance/post/responses/500/content/application~1json/examples/500
+      Something went wrong on our side
+    - >-
+      #/paths/~1v2~1autoexecution~1search~1utxo~1{utxoId}/post/requestBody/content/application~1json/examples/UTXO
+      Search
+    - >-
+      #/paths/~1v2~1autoexecution~1search~1utxo~1{utxoId}/post/responses/200/content/application~1json/examples/Successful
+      Prepare and Address transaction not found Execute Response
+    - >-
+      #/paths/~1v2~1autoexecution~1search~1utxo~1{utxoId}/post/responses/200/content/application~1json/examples/Successful
+      Prepare and Execute Response
+    - >-
+      #/paths/~1v2~1autoexecution~1search~1utxo~1{utxoId}/post/responses/200/content/application~1json/examples/Successful
+      Prepare and Address vout not found Execute Response
+    - >-
+      #/paths/~1v2~1autoexecution~1search~1utxo~1{utxoId}/post/responses/400/content/application~1json/examples/Utxo
+      not valid
+    - >-
+      #/paths/~1v2~1autoexecution~1search~1utxo~1{utxoId}/post/responses/400/content/application~1json/examples/Ethereum
+      not supported
+    - >-
+      #/paths/~1v2~1autoexecution~1search~1utxo~1{utxoId}/post/responses/400/content/application~1json/examples/Utxo
+      id param must be provided
+    - >-
+      #/paths/~1v2~1autoexecution~1search~1utxo~1{utxoId}/post/responses/400/content/application~1json/examples/Technology
+      or network not supported
+    - >-
+      #/paths/~1v2~1autoexecution~1search~1utxo~1{utxoId}/post/responses/401/content/application~1json/examples/Not
+      Authorized
+    - >-
+      #/paths/~1v2~1autoexecution~1search~1utxo~1{utxoId}/post/responses/500/content/application~1json/examples/500
+      Something went wrong on our side
+    - >-
+      #/paths/~1v2~1preparation~1credit/post/requestBody/content/application~1json/examples/QRC20
+      Create Credit
+    - >-
+      #/paths/~1v2~1preparation~1credit/post/responses/200/content/application~1json/examples/Prepare
+      Response
+    - >-
+      #/paths/~1v2~1preparation~1credit/post/responses/400/content/application~1json/examples/Bad
+      Request
+    - >-
+      #/paths/~1v2~1preparation~1credit/post/responses/401/content/application~1json/examples/Bad
+      Request
+    - >-
+      #/paths/~1v2~1preparation~1credit/post/responses/500/content/application~1json/examples/500
+      Something went wrong on our side
+    - >-
+      #/paths/~1v2~1autoexecution~1search~1block~1{blockId}/post/parameters/1/examples/Block
+      Hash
+    - >-
+      #/paths/~1v2~1autoexecution~1search~1block~1{blockId}/post/parameters/1/examples/Latest
+      Block
+    - >-
+      #/paths/~1v2~1autoexecution~1search~1block~1{blockId}/post/requestBody/content/application~1json/examples/Block
+      Search
+    - >-
+      #/paths/~1v2~1autoexecution~1search~1block~1{blockId}/post/responses/200/content/application~1json/examples/Successful
+      Prepare and Failed Execute Response
+    - >-
+      #/paths/~1v2~1autoexecution~1search~1block~1{blockId}/post/responses/200/content/application~1json/examples/Successful
+      Prepare and Block not found Execute Response
+    - >-
+      #/paths/~1v2~1autoexecution~1search~1block~1{blockId}/post/responses/200/content/application~1json/examples/Successful
+      Prepare and Execute Response
+    - >-
+      #/paths/~1v2~1autoexecution~1search~1block~1{blockId}/post/responses/400/content/application~1json/examples/Technology
+      or network not supported
+    - >-
+      #/paths/~1v2~1autoexecution~1search~1block~1{blockId}/post/responses/400/content/application~1json/examples/Block
+      not valid
+    - >-
+      #/paths/~1v2~1autoexecution~1search~1block~1{blockId}/post/responses/400/content/application~1json/examples/Block
+      id param must be provided
+    - >-
+      #/paths/~1v2~1autoexecution~1search~1block~1{blockId}/post/responses/401/content/application~1json/examples/Not
+      Authorized
+    - >-
+      #/paths/~1v2~1autoexecution~1search~1block~1{blockId}/post/responses/500/content/application~1json/examples/500
+      Something went wrong on our side
+    - >-
+      #/paths/~1v2~1tokenise~1tokens~1subscription~1{flowtype}~1supply/post/requestBody/content/application~1json/examples/Subscribe
+      QRC721 supply burn event
+    - >-
+      #/paths/~1v2~1tokenise~1tokens~1subscription~1{flowtype}~1supply/post/requestBody/content/application~1json/examples/Subscribe
+      To QRC20 Burn Tokens Event
+    - >-
+      #/paths/~1v2~1tokenise~1tokens~1subscription~1{flowtype}~1supply/post/requestBody/content/application~1json/examples/Subscribe
+      To QRC20 Mint Tokens Event
+    - >-
+      #/paths/~1v2~1tokenise~1tokens~1subscription~1{flowtype}~1supply/post/requestBody/content/application~1json/examples/Subscribe
+      QRC721 supply mint event
+    - >-
+      #/paths/~1v2~1tokenise~1tokens~1subscription~1{flowtype}~1supply/post/responses/200/content/application~1json/examples/Burn
+      Tokens
+    - >-
+      #/paths/~1v2~1tokenise~1tokens~1subscription~1{flowtype}~1supply/post/responses/200/content/application~1json/examples/Mint
+      Tokens
+    - >-
+      #/paths/~1v2~1tokenise~1tokens~1subscription~1{flowtype}~1supply/post/responses/400/content/application~1json/examples/Bad
+      Request
+    - >-
+      #/paths/~1v2~1tokenise~1tokens~1subscription~1{flowtype}~1supply/post/responses/401/content/application~1json/examples/Bad
+      Request
+    - >-
+      #/paths/~1v2~1tokenise~1tokens~1subscription~1{flowtype}~1supply/post/responses/500/content/application~1json/examples/500
+      Something went wrong on our side
+    - >-
+      #/paths/~1v2~1tokenise~1tokens~1qrc20~1approved-debit-amount/post/requestBody/content/application~1json/examples/Approved
+      Debit Amount of a QRC20 token
+    - >-
+      #/paths/~1v2~1tokenise~1tokens~1qrc20~1approved-debit-amount/post/responses/200/content/application~1json/examples/Account
+      Balance Of a QRC20 Token Response
+    - >-
+      #/paths/~1v2~1tokenise~1tokens~1qrc20~1approved-debit-amount/post/responses/401/content/application~1json/examples/Not
+      Authorized
+    - >-
+      #/paths/~1v2~1tokenise~1tokens~1qrc20~1approved-debit-amount/post/responses/500/content/application~1json/examples/500
+      Something went wrong on our side
+    - >-
+      #/paths/~1v2~1tokenise~1tokens~1qrc721~1token-count/post/requestBody/content/application~1json/examples/QRC721
+      Token Count
+    - >-
+      #/paths/~1v2~1tokenise~1tokens~1qrc721~1token-count/post/responses/200/content/application~1json/examples/Token
+      Count Response
+    - >-
+      #/paths/~1v2~1tokenise~1tokens~1qrc721~1token-count/post/responses/400/content/application~1json/examples/Invalid
+      Request-Token Name
+    - >-
+      #/paths/~1v2~1tokenise~1tokens~1qrc721~1token-count/post/responses/401/content/application~1json/examples/Not
+      Authorized
+    - >-
+      #/paths/~1v2~1tokenise~1tokens~1qrc721~1token-count/post/responses/500/content/application~1json/examples/500
+      Something went wrong on our side
+    - >-
+      #/paths/~1v2~1tokenise~1tokens~1qrc721~1token-uri/post/requestBody/content/application~1json/examples/URI
+      of a QRC721 Token
+    - >-
+      #/paths/~1v2~1tokenise~1tokens~1qrc721~1token-uri/post/responses/200/content/application~1json/examples/URI
+      Of a QRC721 Token Response
+    - >-
+      #/paths/~1v2~1tokenise~1tokens~1qrc721~1token-uri/post/responses/400/content/application~1json/examples/Invalid
+      Request-Token Name
+    - >-
+      #/paths/~1v2~1tokenise~1tokens~1qrc721~1token-uri/post/responses/401/content/application~1json/examples/Not
+      Authorized
+    - >-
+      #/paths/~1v2~1tokenise~1tokens~1qrc721~1token-uri/post/responses/500/content/application~1json/examples/500
+      Something went wrong on our side
+    - >-
+      #/paths/~1v2~1tokenise~1preparation~1transaction~1qrc721~1collect/post/requestBody/content/application~1json/examples/Prepare
+      Approve collect for QRC721
+    - >-
+      #/paths/~1v2~1tokenise~1preparation~1transaction~1qrc721~1collect/post/requestBody/content/application~1json/examples/Prepare
+      Collect for QRC721
+    - >-
+      #/paths/~1v2~1tokenise~1preparation~1transaction~1qrc721~1collect/post/responses/200/content/application~1json/examples/Prepare
+      Collect Response
+    - >-
+      #/paths/~1v2~1tokenise~1preparation~1transaction~1qrc721~1collect/post/responses/401/content/application~1json/examples/Bad
+      Request
+    - >-
+      #/paths/~1v2~1tokenise~1preparation~1transaction~1qrc721~1collect/post/responses/500/content/application~1json/examples/500
+      Something went wrong on our side
+    - >-
+      #/paths/~1v2~1execution~1search~1utxo/post/responses/200/content/application~1json/examples/Execute
+      Response
+    - >-
+      #/paths/~1v2~1execution~1search~1utxo/post/responses/401/content/application~1json/examples/Not
+      Authorized
+    - >-
+      #/paths/~1v2~1execution~1search~1utxo/post/responses/404/content/application~1json/examples/Bad
+      Request
+    - >-
+      #/paths/~1v2~1execution~1search~1utxo/post/responses/500/content/application~1json/examples/500
+      Something went wrong on our side
+    - >-
+      #/paths/~1v2~1preparation~1supply/post/requestBody/content/application~1json/examples/QRC20
+      Burn Tokens
+    - >-
+      #/paths/~1v2~1preparation~1supply/post/requestBody/content/application~1json/examples/QRC20
+      Mint Tokens
+    - >-
+      #/paths/~1v2~1preparation~1supply/post/responses/200/content/application~1json/examples/Prepare
+      Response
+    - >-
+      #/paths/~1v2~1preparation~1supply/post/responses/400/content/application~1json/examples/Bad
+      Request
+    - >-
+      #/paths/~1v2~1preparation~1supply/post/responses/401/content/application~1json/examples/Bad
+      Request
+    - >-
+      #/paths/~1v2~1preparation~1supply/post/responses/500/content/application~1json/examples/500
+      Something went wrong on our side
+    - >-
+      #/paths/~1v2~1webhook~1subscription/post/requestBody/content/application~1json/examples/Create
+      Subscription
+    - >-
+      #/paths/~1v2~1webhook~1subscription/post/responses/200/content/application~1json/examples/Create
+      Subscription
+    - >-
+      #/paths/~1v2~1webhook~1subscription/post/responses/400/content/application~1json/examples/400
+      Bad Request
+    - >-
+      #/paths/~1v2~1webhook~1subscription/post/responses/401/content/application~1json/examples/Not
+      Authorized
+    - >-
+      #/paths/~1v2~1webhook~1subscription/post/responses/404/content/application~1json/examples/404
+      Not Found
+    - >-
+      #/paths/~1v2~1webhook~1subscription/post/responses/500/content/application~1json/examples/500
+      Something went wrong on our side
+  no-invalid-media-type-examples:
+    - >-
+      #/paths/~1v2~1preparation~1debit/post/requestBody/content/application~1json/examples/QRC20
+      Create Debit/value/type
+    - >-
+      #/paths/~1v2~1preparation~1debit/post/requestBody/content/application~1json/examples/QRC20
+      Create Debit/value/urgency
+    - >-
+      #/paths/~1v2~1preparation~1debit/post/requestBody/content/application~1json/examples/QRC20
+      Create Debit/value/requestDetails/payee
+    - >-
+      #/paths/~1v2~1preparation~1debit/post/requestBody/content/application~1json/examples/QRC20
+      Create Debit/value/requestDetails/message
+    - >-
+      #/paths/~1v2~1preparation~1debit/post/requestBody/content/application~1json/examples/QRC20
+      Create Debit/value
+    - >-
+      #/paths/~1v2~1preparation~1debit/post/requestBody/content/application~1json/examples/QRC20
+      Approve Debit/value/type
+    - >-
+      #/paths/~1v2~1preparation~1debit/post/requestBody/content/application~1json/examples/QRC20
+      Approve Debit/value/urgency
+    - >-
+      #/paths/~1v2~1preparation~1debit/post/requestBody/content/application~1json/examples/QRC20
+      Approve Debit/value/requestDetails/mandate
+    - >-
+      #/paths/~1v2~1preparation~1debit/post/requestBody/content/application~1json/examples/QRC20
+      Approve Debit/value/requestDetails/message
+    - >-
+      #/paths/~1v2~1preparation~1debit/post/requestBody/content/application~1json/examples/QRC20
+      Approve Debit/value
+    - >-
+      #/paths/~1v2~1preparation~1debit/post/responses/401/content/application~1json/examples/Bad
+      Request/value/errors/0/code
+    - >-
+      #/paths/~1v2~1tokenise~1tokens~1qrc20~1secondary-account-owner/post/requestBody/content/application~1json/examples/Contract
+      Secondary Owner Of a QRC20 Token/value/tokenName
+    - >-
+      #/paths/~1v2~1tokenise~1tokens~1qrc20~1secondary-account-owner/post/requestBody/content/application~1json/examples/Contract
+      Secondary Owner Of a QRC20 Token/value/responseDetails
+    - >-
+      #/paths/~1v2~1tokenise~1tokens~1qrc20~1secondary-account-owner/post/requestBody/content/application~1json/examples/Contract
+      Secondary Owner Of a QRC20 Token/value/requestId
+    - >-
+      #/paths/~1v2~1tokenise~1tokens~1qrc20~1secondary-account-owner/post/responses/200/content/application~1json/examples/Account
+      Balance Of a QRC20 Token Response/value/tokenName
+    - >-
+      #/paths/~1v2~1tokenise~1tokens~1qrc20~1secondary-account-owner/post/responses/200/content/application~1json/examples/Account
+      Balance Of a QRC20 Token Response/value/responseDetails
+    - >-
+      #/paths/~1v2~1tokenise~1tokens~1qrc20~1secondary-account-owner/post/responses/401/content/application~1json/examples/Not
+      Authorized/value/errors/0/code
+    - >-
+      #/paths/~1v2~1tokenise~1tokens~1subscription~1qrc20~1credit/post/requestBody/content/application~1json/examples/Subscribe
+      To QRC20 Create Credit Event/value/location
+    - >-
+      #/paths/~1v2~1tokenise~1tokens~1subscription~1qrc20~1credit/post/requestBody/content/application~1json/examples/Subscribe
+      To QRC20 Create Credit Event/value/callbackUrl
+    - >-
+      #/paths/~1v2~1tokenise~1tokens~1subscription~1qrc20~1credit/post/requestBody/content/application~1json/examples/Subscribe
+      To QRC20 Create Credit Event/value/type
+    - >-
+      #/paths/~1v2~1tokenise~1tokens~1subscription~1qrc20~1credit/post/requestBody/content/application~1json/examples/Subscribe
+      To QRC20 Create Credit Event/value/requestDetails
+    - >-
+      #/paths/~1v2~1tokenise~1tokens~1subscription~1qrc20~1credit/post/responses/401/content/application~1json/examples/Bad
+      Request/value/errors/0/code
+    - >-
+      #/paths/~1v2~1tokenise~1preparation~1transaction~1qrc721~1supply/post/requestBody/content/application~1json/examples/QRC721
+      Burn Tokens/value/type
+    - >-
+      #/paths/~1v2~1tokenise~1preparation~1transaction~1qrc721~1supply/post/requestBody/content/application~1json/examples/QRC721
+      Burn Tokens/value/urgency
+    - >-
+      #/paths/~1v2~1tokenise~1preparation~1transaction~1qrc721~1supply/post/requestBody/content/application~1json/examples/QRC721
+      Burn Tokens/value/requestDetails/owner
+    - >-
+      #/paths/~1v2~1tokenise~1preparation~1transaction~1qrc721~1supply/post/requestBody/content/application~1json/examples/QRC721
+      Burn Tokens/value/requestDetails/owner/burn
+    - >-
+      #/paths/~1v2~1tokenise~1preparation~1transaction~1qrc721~1supply/post/requestBody/content/application~1json/examples/QRC721
+      Burn Tokens/value/requestDetails/owner/burn/tokenId
+    - >-
+      #/paths/~1v2~1tokenise~1preparation~1transaction~1qrc721~1supply/post/requestBody/content/application~1json/examples/QRC721
+      Burn Tokens/value/requestDetails/owner/burn/tokenName
+    - >-
+      #/paths/~1v2~1tokenise~1preparation~1transaction~1qrc721~1supply/post/requestBody/content/application~1json/examples/QRC721
+      Burn Tokens/value/requestDetails/owner/burn/metadata
+    - >-
+      #/paths/~1v2~1tokenise~1preparation~1transaction~1qrc721~1supply/post/requestBody/content/application~1json/examples/QRC721
+      Burn Tokens/value
+    - >-
+      #/paths/~1v2~1tokenise~1preparation~1transaction~1qrc721~1supply/post/requestBody/content/application~1json/examples/QRC721
+      Mint Tokens/value/type
+    - >-
+      #/paths/~1v2~1tokenise~1preparation~1transaction~1qrc721~1supply/post/requestBody/content/application~1json/examples/QRC721
+      Mint Tokens/value/urgency
+    - >-
+      #/paths/~1v2~1tokenise~1preparation~1transaction~1qrc721~1supply/post/requestBody/content/application~1json/examples/QRC721
+      Mint Tokens/value/requestDetails/beneficiary
+    - >-
+      #/paths/~1v2~1tokenise~1preparation~1transaction~1qrc721~1supply/post/requestBody/content/application~1json/examples/QRC721
+      Mint Tokens/value/requestDetails/creator
+    - >-
+      #/paths/~1v2~1tokenise~1preparation~1transaction~1qrc721~1supply/post/requestBody/content/application~1json/examples/QRC721
+      Mint Tokens/value
+    - >-
+      #/paths/~1v2~1tokenise~1preparation~1transaction~1qrc721~1supply/post/responses/401/content/application~1json/examples/Bad
+      Request/value/errors/0/code
+    - >-
+      #/paths/~1v2~1execution~1search~1smartcontract/post/responses/200/content/application~1json/examples/Execute
+      Response/value/smartContract/function/outputParameters/0/value
+    - >-
+      #/paths/~1v2~1execution~1search~1smartcontract/post/responses/401/content/application~1json/examples/Not
+      Authorized/value/errors/0/code
+    - >-
+      #/paths/~1v2~1tokens~1fungible/get/responses/200/content/application~1json/examples/Tokens/value
+    - >-
+      #/paths/~1v2~1tokens~1fungible/get/responses/400/content/application~1json/examples/Bad
+      Request/value
+    - >-
+      #/paths/~1v2~1tokens~1fungible/get/responses/401/content/application~1json/examples/Bad
+      Request/value/errors/0/code
+    - >-
+      #/paths/~1v2~1execution~1search~1address~1sequence/post/responses/401/content/application~1json/examples/Not
+      Authorized/value/errors/0/code
+    - >-
+      #/paths/~1v2~1tokenise~1tokens~1{flowType}~1current-supply/post/responses/200/content/application~1json/examples/Current
+      Supply Of a QRC721 Token Response/value/responseDetails/name
+    - >-
+      #/paths/~1v2~1tokenise~1tokens~1{flowType}~1current-supply/post/responses/200/content/application~1json/examples/Current
+      Supply Of a QRC721 Token Response/value/responseDetails/value
+    - >-
+      #/paths/~1v2~1tokenise~1tokens~1{flowType}~1current-supply/post/responses/401/content/application~1json/examples/Not
+      Authorized/value/errors/0/code
+    - >-
+      #/paths/~1v2~1execution~1search~1transaction/post/responses/200/content/application~1json/examples/Execute
+      Response/value/status/code
+    - >-
+      #/paths/~1v2~1execution~1search~1transaction/post/responses/401/content/application~1json/examples/Not
+      Authorized/value/errors/0/code
+    - >-
+      #/paths/~1v2~1tokenise~1tokens~1subscription~1qrc20~1debit/post/requestBody/content/application~1json/examples/Subscribe
+      To QRC20 Create Debit Event/value/location
+    - >-
+      #/paths/~1v2~1tokenise~1tokens~1subscription~1qrc20~1debit/post/requestBody/content/application~1json/examples/Subscribe
+      To QRC20 Create Debit Event/value/callbackUrl
+    - >-
+      #/paths/~1v2~1tokenise~1tokens~1subscription~1qrc20~1debit/post/requestBody/content/application~1json/examples/Subscribe
+      To QRC20 Create Debit Event/value/type
+    - >-
+      #/paths/~1v2~1tokenise~1tokens~1subscription~1qrc20~1debit/post/requestBody/content/application~1json/examples/Subscribe
+      To QRC20 Create Debit Event/value/requestDetails
+    - >-
+      #/paths/~1v2~1tokenise~1tokens~1subscription~1qrc20~1debit/post/requestBody/content/application~1json/examples/Subscribe
+      QRC20 Approve Debit Event/value/location
+    - >-
+      #/paths/~1v2~1tokenise~1tokens~1subscription~1qrc20~1debit/post/requestBody/content/application~1json/examples/Subscribe
+      QRC20 Approve Debit Event/value/callbackUrl
+    - >-
+      #/paths/~1v2~1tokenise~1tokens~1subscription~1qrc20~1debit/post/requestBody/content/application~1json/examples/Subscribe
+      QRC20 Approve Debit Event/value/type
+    - >-
+      #/paths/~1v2~1tokenise~1tokens~1subscription~1qrc20~1debit/post/requestBody/content/application~1json/examples/Subscribe
+      QRC20 Approve Debit Event/value/requestDetails
+    - >-
+      #/paths/~1v2~1tokenise~1tokens~1subscription~1qrc20~1debit/post/responses/200/content/application~1json/examples/Create
+      Debit/value/tokenUnit
+    - >-
+      #/paths/~1v2~1tokenise~1tokens~1subscription~1qrc20~1debit/post/responses/200/content/application~1json/examples/Approve
+      Debit/value/tokenUnit
+    - >-
+      #/paths/~1v2~1tokenise~1tokens~1subscription~1qrc20~1debit/post/responses/200/content/application~1json/examples/Approve
+      Debit/value/subscriptionDetails/callbackUrl
+    - >-
+      #/paths/~1v2~1tokenise~1tokens~1subscription~1qrc20~1debit/post/responses/401/content/application~1json/examples/Bad
+      Request/value/errors/0/code
+    - >-
+      #/paths/~1v2~1autoexecution~1search~1transaction/post/responses/200/content/application~1json/examples/Successful
+      Prepare and Execute
+      Response/value/executionTransactionSearchResponse/status/code
+    - >-
+      #/paths/~1v2~1autoexecution~1search~1transaction/post/responses/400/content/application~1json/examples/Bad
+      Request/value/category
+    - >-
+      #/paths/~1v2~1autoexecution~1search~1transaction/post/responses/400/content/application~1json/examples/Bad
+      Request/value/code
+    - >-
+      #/paths/~1v2~1autoexecution~1search~1transaction/post/responses/401/content/application~1json/examples/Not
+      Authorized/value/errors/0/code
+    - >-
+      #/paths/~1v2~1autoexecution~1search~1transaction/post/responses/404/content/application~1json/examples/Bad
+      Request/value/category
+    - >-
+      #/paths/~1v2~1autoexecution~1search~1transaction/post/responses/404/content/application~1json/examples/Bad
+      Request/value/code
+    - >-
+      #/paths/~1v2~1preparation~1search~1utxo~1{utxoId}/post/responses/401/content/application~1json/examples/Bad
+      Request/value/errors/0/code
+    - >-
+      #/paths/~1v2~1tokenise~1tokens~1subscription~1qrc20~1secondaryaccountowner/post/requestBody/content/application~1json/examples/Subscribe
+      To QRC20 Add Secondary Owner Event/value/location
+    - >-
+      #/paths/~1v2~1tokenise~1tokens~1subscription~1qrc20~1secondaryaccountowner/post/requestBody/content/application~1json/examples/Subscribe
+      To QRC20 Add Secondary Owner Event/value/callbackUrl
+    - >-
+      #/paths/~1v2~1tokenise~1tokens~1subscription~1qrc20~1secondaryaccountowner/post/requestBody/content/application~1json/examples/Subscribe
+      To QRC20 Add Secondary Owner Event/value/type
+    - >-
+      #/paths/~1v2~1tokenise~1tokens~1subscription~1qrc20~1secondaryaccountowner/post/requestBody/content/application~1json/examples/Subscribe
+      To QRC20 Add Secondary Owner Event/value/requestDetails
+    - >-
+      #/paths/~1v2~1tokenise~1tokens~1subscription~1qrc20~1secondaryaccountowner/post/requestBody/content/application~1json/examples/Subscribe
+      To QRC20 Secondary Owner Credit Event/value/location
+    - >-
+      #/paths/~1v2~1tokenise~1tokens~1subscription~1qrc20~1secondaryaccountowner/post/requestBody/content/application~1json/examples/Subscribe
+      To QRC20 Secondary Owner Credit Event/value/callbackUrl
+    - >-
+      #/paths/~1v2~1tokenise~1tokens~1subscription~1qrc20~1secondaryaccountowner/post/requestBody/content/application~1json/examples/Subscribe
+      To QRC20 Secondary Owner Credit Event/value/type
+    - >-
+      #/paths/~1v2~1tokenise~1tokens~1subscription~1qrc20~1secondaryaccountowner/post/requestBody/content/application~1json/examples/Subscribe
+      To QRC20 Secondary Owner Credit Event/value/requestDetails
+    - >-
+      #/paths/~1v2~1tokenise~1tokens~1subscription~1qrc20~1secondaryaccountowner/post/requestBody/content/application~1json/examples/Subscribe
+      To QRC20 Remove Secondary Owner Event/value/location
+    - >-
+      #/paths/~1v2~1tokenise~1tokens~1subscription~1qrc20~1secondaryaccountowner/post/requestBody/content/application~1json/examples/Subscribe
+      To QRC20 Remove Secondary Owner Event/value/callbackUrl
+    - >-
+      #/paths/~1v2~1tokenise~1tokens~1subscription~1qrc20~1secondaryaccountowner/post/requestBody/content/application~1json/examples/Subscribe
+      To QRC20 Remove Secondary Owner Event/value/type
+    - >-
+      #/paths/~1v2~1tokenise~1tokens~1subscription~1qrc20~1secondaryaccountowner/post/requestBody/content/application~1json/examples/Subscribe
+      To QRC20 Remove Secondary Owner Event/value/requestDetails
+    - >-
+      #/paths/~1v2~1tokenise~1tokens~1subscription~1qrc20~1secondaryaccountowner/post/responses/401/content/application~1json/examples/Bad
+      Request/value/errors/0/code
+    - >-
+      #/paths/~1v2~1tokenise~1tokens~1qrc721~1token-owner/post/responses/200/content/application~1json/examples/Token
+      Owner Of a QRC721 Token Response/value/responseDetails/name
+    - >-
+      #/paths/~1v2~1tokenise~1tokens~1qrc721~1token-owner/post/responses/200/content/application~1json/examples/Token
+      Owner Of a QRC721 Token Response/value/responseDetails/value
+    - >-
+      #/paths/~1v2~1tokenise~1tokens~1qrc721~1token-owner/post/responses/401/content/application~1json/examples/Not
+      Authorized/value/errors/0/code
+    - >-
+      #/paths/~1v2~1webhook~1subscription~1{subscriptionId}/delete/responses/200/content/application~1json/examples/200
+      Delete Successful/value/subscriptionDetails/status/code
+    - >-
+      #/paths/~1v2~1webhook~1subscription~1{subscriptionId}/delete/responses/401/content/application~1json/examples/Not
+      Authorized/value/errors/0/code
+    - >-
+      #/paths/~1v2~1webhook~1subscription~1{subscriptionId}/delete/responses/404/content/application~1json/examples/404
+      Not Found/value/category
+    - >-
+      #/paths/~1v2~1webhook~1subscription~1{subscriptionId}/delete/responses/404/content/application~1json/examples/404
+      Not Found/value/description
+    - >-
+      #/paths/~1v2~1webhook~1subscription~1{subscriptionId}/delete/responses/404/content/application~1json/examples/404
+      Not Found/value/code
+    - >-
+      #/paths/~1v2~1webhook~1subscription~1{subscriptionId}/patch/responses/200/content/application~1json/examples/200
+      Update Success/value/subscriptionDetails/status/code
+    - >-
+      #/paths/~1v2~1webhook~1subscription~1{subscriptionId}/patch/responses/401/content/application~1json/examples/Not
+      Authorized/value/errors/0/code
+    - >-
+      #/paths/~1v2~1webhook~1subscription~1{subscriptionId}/patch/responses/404/content/application~1json/examples/404
+      Not Found/value/category
+    - >-
+      #/paths/~1v2~1webhook~1subscription~1{subscriptionId}/patch/responses/404/content/application~1json/examples/404
+      Not Found/value/description
+    - >-
+      #/paths/~1v2~1webhook~1subscription~1{subscriptionId}/patch/responses/404/content/application~1json/examples/404
+      Not Found/value/code
+    - >-
+      #/paths/~1v2~1webhook~1subscription~1{subscriptionId}/patch/responses/405/content/application~1json/examples/405
+      Method is not allowed/value/category
+    - >-
+      #/paths/~1v2~1webhook~1subscription~1{subscriptionId}/patch/responses/405/content/application~1json/examples/405
+      Method is not allowed/value/description
+    - >-
+      #/paths/~1v2~1webhook~1subscription~1{subscriptionId}/patch/responses/405/content/application~1json/examples/405
+      Method is not allowed/value/code
+    - >-
+      #/paths/~1v2~1preparation~1search~1address~1sequence~1{addressId}/post/responses/401/content/application~1json/examples/Bad
+      Request/value/errors/0/code
+    - >-
+      #/paths/~1v2~1preparation~1transaction/post/requestBody/content/application~1json/examples/Substrate/value/type
+    - >-
+      #/paths/~1v2~1preparation~1transaction/post/requestBody/content/application~1json/examples/Substrate/value/urgency
+    - >-
+      #/paths/~1v2~1preparation~1transaction/post/requestBody/content/application~1json/examples/Substrate/value/requestDetails/destination/0/payment
+    - >-
+      #/paths/~1v2~1preparation~1transaction/post/requestBody/content/application~1json/examples/Substrate/value/requestDetails/message
+    - >-
+      #/paths/~1v2~1preparation~1transaction/post/requestBody/content/application~1json/examples/Substrate/value/requestDetails/overledgerSigningType
+    - >-
+      #/paths/~1v2~1preparation~1transaction/post/requestBody/content/application~1json/examples/Substrate/value
+    - >-
+      #/paths/~1v2~1preparation~1transaction/post/requestBody/content/application~1json/examples/ERC20
+      Payment/value/type
+    - >-
+      #/paths/~1v2~1preparation~1transaction/post/requestBody/content/application~1json/examples/ERC20
+      Payment/value/urgency
+    - >-
+      #/paths/~1v2~1preparation~1transaction/post/requestBody/content/application~1json/examples/ERC20
+      Payment/value/requestDetails/destination/0/payment
+    - >-
+      #/paths/~1v2~1preparation~1transaction/post/requestBody/content/application~1json/examples/ERC20
+      Payment/value/requestDetails/message
+    - >-
+      #/paths/~1v2~1preparation~1transaction/post/requestBody/content/application~1json/examples/ERC20
+      Payment/value/requestDetails/overledgerSigningType
+    - >-
+      #/paths/~1v2~1preparation~1transaction/post/requestBody/content/application~1json/examples/ERC20
+      Payment/value
+    - >-
+      #/paths/~1v2~1preparation~1transaction/post/requestBody/content/application~1json/examples/ERC721
+      Transfer/value/urgency
+    - >-
+      #/paths/~1v2~1preparation~1transaction/post/requestBody/content/application~1json/examples/ERC721
+      Transfer/value/requestDetails/destination/0
+    - >-
+      #/paths/~1v2~1preparation~1transaction/post/requestBody/content/application~1json/examples/ERC721
+      Transfer/value/requestDetails/destination/0/transfer
+    - >-
+      #/paths/~1v2~1preparation~1transaction/post/requestBody/content/application~1json/examples/ERC721
+      Transfer/value/requestDetails/message
+    - >-
+      #/paths/~1v2~1preparation~1transaction/post/requestBody/content/application~1json/examples/ERC721
+      Transfer/value/requestDetails/overledgerSigningType
+    - >-
+      #/paths/~1v2~1preparation~1transaction/post/requestBody/content/application~1json/examples/ERC721
+      Transfer/value
+    - >-
+      #/paths/~1v2~1preparation~1transaction/post/requestBody/content/application~1json/examples/Bitcoin/value/type
+    - >-
+      #/paths/~1v2~1preparation~1transaction/post/requestBody/content/application~1json/examples/Bitcoin/value/urgency
+    - >-
+      #/paths/~1v2~1preparation~1transaction/post/requestBody/content/application~1json/examples/Bitcoin/value/requestDetails/destination/0/payment
+    - >-
+      #/paths/~1v2~1preparation~1transaction/post/requestBody/content/application~1json/examples/Bitcoin/value/requestDetails/message
+    - >-
+      #/paths/~1v2~1preparation~1transaction/post/requestBody/content/application~1json/examples/Bitcoin/value/requestDetails/overledgerSigningType
+    - >-
+      #/paths/~1v2~1preparation~1transaction/post/requestBody/content/application~1json/examples/Bitcoin/value
+    - >-
+      #/paths/~1v2~1preparation~1transaction/post/requestBody/content/application~1json/examples/Ethereum/value/type
+    - >-
+      #/paths/~1v2~1preparation~1transaction/post/requestBody/content/application~1json/examples/Ethereum/value/urgency
+    - >-
+      #/paths/~1v2~1preparation~1transaction/post/requestBody/content/application~1json/examples/Ethereum/value/requestDetails/destination/0/payment
+    - >-
+      #/paths/~1v2~1preparation~1transaction/post/requestBody/content/application~1json/examples/Ethereum/value/requestDetails/message
+    - >-
+      #/paths/~1v2~1preparation~1transaction/post/requestBody/content/application~1json/examples/Ethereum/value/requestDetails/overledgerSigningType
+    - >-
+      #/paths/~1v2~1preparation~1transaction/post/requestBody/content/application~1json/examples/Ethereum/value
+    - >-
+      #/paths/~1v2~1preparation~1transaction/post/requestBody/content/application~1json/examples/Smart
+      Contract Invoke/value/urgency
+    - >-
+      #/paths/~1v2~1preparation~1transaction/post/requestBody/content/application~1json/examples/Smart
+      Contract Invoke/value/requestDetails/destination/0/smartContract
+    - >-
+      #/paths/~1v2~1preparation~1transaction/post/requestBody/content/application~1json/examples/Smart
+      Contract Invoke/value/requestDetails/destination/0/payment
+    - >-
+      #/paths/~1v2~1preparation~1transaction/post/requestBody/content/application~1json/examples/Smart
+      Contract Invoke/value
+    - >-
+      #/paths/~1v2~1preparation~1transaction/post/requestBody/content/application~1json/examples/Smart
+      Contract Invoke - Getting Test QNT/value/urgency
+    - >-
+      #/paths/~1v2~1preparation~1transaction/post/requestBody/content/application~1json/examples/Smart
+      Contract Invoke - Getting Test
+      QNT/value/requestDetails/destination/0/smartContract
+    - >-
+      #/paths/~1v2~1preparation~1transaction/post/requestBody/content/application~1json/examples/Smart
+      Contract Invoke - Getting Test
+      QNT/value/requestDetails/destination/0/payment
+    - >-
+      #/paths/~1v2~1preparation~1transaction/post/requestBody/content/application~1json/examples/Smart
+      Contract Invoke - Getting Test
+      QNT/value/requestDetails/destination/0/smartContract/function/outputParameters
+    - >-
+      #/paths/~1v2~1preparation~1transaction/post/requestBody/content/application~1json/examples/Smart
+      Contract Invoke - Getting Test QNT/value
+    - >-
+      #/paths/~1v2~1preparation~1transaction/post/requestBody/content/application~1json/examples/Polygon/value/type
+    - >-
+      #/paths/~1v2~1preparation~1transaction/post/requestBody/content/application~1json/examples/Polygon/value/urgency
+    - >-
+      #/paths/~1v2~1preparation~1transaction/post/requestBody/content/application~1json/examples/Polygon/value/requestDetails/destination/0/payment
+    - >-
+      #/paths/~1v2~1preparation~1transaction/post/requestBody/content/application~1json/examples/Polygon/value/requestDetails/message
+    - >-
+      #/paths/~1v2~1preparation~1transaction/post/requestBody/content/application~1json/examples/Polygon/value/requestDetails/overledgerSigningType
+    - >-
+      #/paths/~1v2~1preparation~1transaction/post/requestBody/content/application~1json/examples/Polygon/value
+    - >-
+      #/paths/~1v2~1preparation~1transaction/post/requestBody/content/application~1json/examples/XRP
+      Ledger/value/type
+    - >-
+      #/paths/~1v2~1preparation~1transaction/post/requestBody/content/application~1json/examples/XRP
+      Ledger/value/urgency
+    - >-
+      #/paths/~1v2~1preparation~1transaction/post/requestBody/content/application~1json/examples/XRP
+      Ledger/value/requestDetails/destination/0/payment
+    - >-
+      #/paths/~1v2~1preparation~1transaction/post/requestBody/content/application~1json/examples/XRP
+      Ledger/value/requestDetails/message
+    - >-
+      #/paths/~1v2~1preparation~1transaction/post/requestBody/content/application~1json/examples/XRP
+      Ledger/value/requestDetails/overledgerSigningType
+    - >-
+      #/paths/~1v2~1preparation~1transaction/post/requestBody/content/application~1json/examples/XRP
+      Ledger/value
+    - >-
+      #/paths/~1v2~1preparation~1transaction/post/responses/401/content/application~1json/examples/Bad
+      Request/value/errors/0/code
+    - >-
+      #/paths/~1v2~1resourcemonitoring~1address/post/responses/200/content/application~1json/examples/Create
+      Resource Monitoring/value/resourceMonitoring/status/code
+    - >-
+      #/paths/~1v2~1resourcemonitoring~1address/post/responses/200/content/application~1json/examples/Create
+      Resource Monitoring/value/subscriptionDetails/status/code
+    - >-
+      #/paths/~1v2~1resourcemonitoring~1address/post/responses/401/content/application~1json/examples/Not
+      Authorized/value/errors/0/code
+    - >-
+      #/paths/~1v2~1tokenise~1preparation~1transaction~1qrc721~1transfer/post/requestBody/content/application~1json/examples/Substrate/value/type
+    - >-
+      #/paths/~1v2~1tokenise~1preparation~1transaction~1qrc721~1transfer/post/requestBody/content/application~1json/examples/Substrate/value/urgency
+    - >-
+      #/paths/~1v2~1tokenise~1preparation~1transaction~1qrc721~1transfer/post/requestBody/content/application~1json/examples/Substrate/value/requestDetails/destination/0/payment
+    - >-
+      #/paths/~1v2~1tokenise~1preparation~1transaction~1qrc721~1transfer/post/requestBody/content/application~1json/examples/Substrate/value/requestDetails/message
+    - >-
+      #/paths/~1v2~1tokenise~1preparation~1transaction~1qrc721~1transfer/post/requestBody/content/application~1json/examples/Substrate/value/requestDetails/overledgerSigningType
+    - >-
+      #/paths/~1v2~1tokenise~1preparation~1transaction~1qrc721~1transfer/post/requestBody/content/application~1json/examples/Substrate/value
+    - >-
+      #/paths/~1v2~1tokenise~1preparation~1transaction~1qrc721~1transfer/post/requestBody/content/application~1json/examples/ERC20
+      Payment/value/type
+    - >-
+      #/paths/~1v2~1tokenise~1preparation~1transaction~1qrc721~1transfer/post/requestBody/content/application~1json/examples/ERC20
+      Payment/value/urgency
+    - >-
+      #/paths/~1v2~1tokenise~1preparation~1transaction~1qrc721~1transfer/post/requestBody/content/application~1json/examples/ERC20
+      Payment/value/requestDetails/destination/0/payment
+    - >-
+      #/paths/~1v2~1tokenise~1preparation~1transaction~1qrc721~1transfer/post/requestBody/content/application~1json/examples/ERC20
+      Payment/value/requestDetails/message
+    - >-
+      #/paths/~1v2~1tokenise~1preparation~1transaction~1qrc721~1transfer/post/requestBody/content/application~1json/examples/ERC20
+      Payment/value/requestDetails/overledgerSigningType
+    - >-
+      #/paths/~1v2~1tokenise~1preparation~1transaction~1qrc721~1transfer/post/requestBody/content/application~1json/examples/ERC20
+      Payment/value
+    - >-
+      #/paths/~1v2~1tokenise~1preparation~1transaction~1qrc721~1transfer/post/requestBody/content/application~1json/examples/ERC721
+      Transfer/value/urgency
+    - >-
+      #/paths/~1v2~1tokenise~1preparation~1transaction~1qrc721~1transfer/post/requestBody/content/application~1json/examples/ERC721
+      Transfer/value/requestDetails/destination/0
+    - >-
+      #/paths/~1v2~1tokenise~1preparation~1transaction~1qrc721~1transfer/post/requestBody/content/application~1json/examples/ERC721
+      Transfer/value/requestDetails/destination/0/transfer
+    - >-
+      #/paths/~1v2~1tokenise~1preparation~1transaction~1qrc721~1transfer/post/requestBody/content/application~1json/examples/ERC721
+      Transfer/value/requestDetails/message
+    - >-
+      #/paths/~1v2~1tokenise~1preparation~1transaction~1qrc721~1transfer/post/requestBody/content/application~1json/examples/ERC721
+      Transfer/value/requestDetails/overledgerSigningType
+    - >-
+      #/paths/~1v2~1tokenise~1preparation~1transaction~1qrc721~1transfer/post/requestBody/content/application~1json/examples/ERC721
+      Transfer/value
+    - >-
+      #/paths/~1v2~1tokenise~1preparation~1transaction~1qrc721~1transfer/post/requestBody/content/application~1json/examples/Bitcoin/value/type
+    - >-
+      #/paths/~1v2~1tokenise~1preparation~1transaction~1qrc721~1transfer/post/requestBody/content/application~1json/examples/Bitcoin/value/urgency
+    - >-
+      #/paths/~1v2~1tokenise~1preparation~1transaction~1qrc721~1transfer/post/requestBody/content/application~1json/examples/Bitcoin/value/requestDetails/destination/0/payment
+    - >-
+      #/paths/~1v2~1tokenise~1preparation~1transaction~1qrc721~1transfer/post/requestBody/content/application~1json/examples/Bitcoin/value/requestDetails/message
+    - >-
+      #/paths/~1v2~1tokenise~1preparation~1transaction~1qrc721~1transfer/post/requestBody/content/application~1json/examples/Bitcoin/value/requestDetails/overledgerSigningType
+    - >-
+      #/paths/~1v2~1tokenise~1preparation~1transaction~1qrc721~1transfer/post/requestBody/content/application~1json/examples/Bitcoin/value
+    - >-
+      #/paths/~1v2~1tokenise~1preparation~1transaction~1qrc721~1transfer/post/requestBody/content/application~1json/examples/Ethereum/value/type
+    - >-
+      #/paths/~1v2~1tokenise~1preparation~1transaction~1qrc721~1transfer/post/requestBody/content/application~1json/examples/Ethereum/value/urgency
+    - >-
+      #/paths/~1v2~1tokenise~1preparation~1transaction~1qrc721~1transfer/post/requestBody/content/application~1json/examples/Ethereum/value/requestDetails/destination/0/payment
+    - >-
+      #/paths/~1v2~1tokenise~1preparation~1transaction~1qrc721~1transfer/post/requestBody/content/application~1json/examples/Ethereum/value/requestDetails/message
+    - >-
+      #/paths/~1v2~1tokenise~1preparation~1transaction~1qrc721~1transfer/post/requestBody/content/application~1json/examples/Ethereum/value/requestDetails/overledgerSigningType
+    - >-
+      #/paths/~1v2~1tokenise~1preparation~1transaction~1qrc721~1transfer/post/requestBody/content/application~1json/examples/Ethereum/value
+    - >-
+      #/paths/~1v2~1tokenise~1preparation~1transaction~1qrc721~1transfer/post/requestBody/content/application~1json/examples/Smart
+      Contract Invoke/value/urgency
+    - >-
+      #/paths/~1v2~1tokenise~1preparation~1transaction~1qrc721~1transfer/post/requestBody/content/application~1json/examples/Smart
+      Contract Invoke/value/requestDetails/destination/0/smartContract
+    - >-
+      #/paths/~1v2~1tokenise~1preparation~1transaction~1qrc721~1transfer/post/requestBody/content/application~1json/examples/Smart
+      Contract Invoke/value/requestDetails/destination/0/payment
+    - >-
+      #/paths/~1v2~1tokenise~1preparation~1transaction~1qrc721~1transfer/post/requestBody/content/application~1json/examples/Smart
+      Contract Invoke/value
+    - >-
+      #/paths/~1v2~1tokenise~1preparation~1transaction~1qrc721~1transfer/post/requestBody/content/application~1json/examples/Polygon/value/type
+    - >-
+      #/paths/~1v2~1tokenise~1preparation~1transaction~1qrc721~1transfer/post/requestBody/content/application~1json/examples/Polygon/value/urgency
+    - >-
+      #/paths/~1v2~1tokenise~1preparation~1transaction~1qrc721~1transfer/post/requestBody/content/application~1json/examples/Polygon/value/requestDetails/destination/0/payment
+    - >-
+      #/paths/~1v2~1tokenise~1preparation~1transaction~1qrc721~1transfer/post/requestBody/content/application~1json/examples/Polygon/value/requestDetails/message
+    - >-
+      #/paths/~1v2~1tokenise~1preparation~1transaction~1qrc721~1transfer/post/requestBody/content/application~1json/examples/Polygon/value/requestDetails/overledgerSigningType
+    - >-
+      #/paths/~1v2~1tokenise~1preparation~1transaction~1qrc721~1transfer/post/requestBody/content/application~1json/examples/Polygon/value
+    - >-
+      #/paths/~1v2~1tokenise~1preparation~1transaction~1qrc721~1transfer/post/requestBody/content/application~1json/examples/XRP
+      Ledger/value/type
+    - >-
+      #/paths/~1v2~1tokenise~1preparation~1transaction~1qrc721~1transfer/post/requestBody/content/application~1json/examples/XRP
+      Ledger/value/urgency
+    - >-
+      #/paths/~1v2~1tokenise~1preparation~1transaction~1qrc721~1transfer/post/requestBody/content/application~1json/examples/XRP
+      Ledger/value/requestDetails/destination/0/payment
+    - >-
+      #/paths/~1v2~1tokenise~1preparation~1transaction~1qrc721~1transfer/post/requestBody/content/application~1json/examples/XRP
+      Ledger/value/requestDetails/message
+    - >-
+      #/paths/~1v2~1tokenise~1preparation~1transaction~1qrc721~1transfer/post/requestBody/content/application~1json/examples/XRP
+      Ledger/value/requestDetails/overledgerSigningType
+    - >-
+      #/paths/~1v2~1tokenise~1preparation~1transaction~1qrc721~1transfer/post/requestBody/content/application~1json/examples/XRP
+      Ledger/value
+    - >-
+      #/paths/~1v2~1tokenise~1preparation~1transaction~1qrc721~1transfer/post/responses/401/content/application~1json/examples/Bad
+      Request/value/errors/0/code
+    - >-
+      #/paths/~1v2~1resourcemonitoring~1smartcontractevent~1{resourceMonitoringId}/get/responses/200/content/application~1json/examples/Get
+      Resource Monitoring Details/value/status/code
+    - >-
+      #/paths/~1v2~1resourcemonitoring~1smartcontractevent~1{resourceMonitoringId}/get/responses/401/content/application~1json/examples/Not
+      Authorized/value/errors/0/code
+    - >-
+      #/paths/~1v2~1resourcemonitoring~1smartcontractevent~1{resourceMonitoringId}/delete/responses/200/content/application~1json/examples/Update
+      Monitoring/value/resourceMonitoring/status/code
+    - >-
+      #/paths/~1v2~1resourcemonitoring~1smartcontractevent~1{resourceMonitoringId}/delete/responses/401/content/application~1json/examples/Not
+      Authorized/value/errors/0/code
+    - >-
+      #/paths/~1v2~1resourcemonitoring~1smartcontractevent~1{resourceMonitoringId}/patch/responses/200/content/application~1json/examples/Update
+      Monitoring/value/resourceMonitoring/status/code
+    - >-
+      #/paths/~1v2~1resourcemonitoring~1smartcontractevent~1{resourceMonitoringId}/patch/responses/401/content/application~1json/examples/Not
+      Authorized/value/errors/0/code
+    - >-
+      #/paths/~1v2~1preparation~1search~1block~1{blockId}/post/responses/401/content/application~1json/examples/Bad
+      Request/value/errors/0/code
+    - >-
+      #/paths/~1v2~1mdapptransaction~1{overledgertransactionid}/get/responses/200/content/application~1json/examples/Overledger
+      Transaction/value/transactionHistory/0/code
+    - >-
+      #/paths/~1v2~1mdapptransaction~1{overledgertransactionid}/get/responses/200/content/application~1json/examples/Overledger
+      Transaction/value/transactionHistory/1/code
+    - >-
+      #/paths/~1v2~1mdapptransaction~1{overledgertransactionid}/get/responses/200/content/application~1json/examples/Overledger
+      Transaction/value/transactionHistory/2/code
+    - >-
+      #/paths/~1v2~1mdapptransaction~1{overledgertransactionid}/get/responses/200/content/application~1json/examples/Overledger
+      Transaction/value/status/code
+    - >-
+      #/paths/~1v2~1mdapptransaction~1{overledgertransactionid}/get/responses/401/content/application~1json/examples/Not
+      Authorized/value/errors/0/code
+    - >-
+      #/paths/~1v2~1resourcemonitoring~1address~1{resourceMonitoringId}/get/responses/200/content/application~1json/examples/Get
+      Resource Monitoring/value/addressHistory
+    - >-
+      #/paths/~1v2~1resourcemonitoring~1address~1{resourceMonitoringId}/get/responses/200/content/application~1json/examples/Get
+      Resource Monitoring/value/status
+    - >-
+      #/paths/~1v2~1resourcemonitoring~1address~1{resourceMonitoringId}/get/responses/401/content/application~1json/examples/Not
+      Authorized/value/errors/0/code
+    - >-
+      #/paths/~1v2~1resourcemonitoring~1address~1{resourceMonitoringId}/delete/responses/200/content/application~1json/examples/Delete
+      Resource Monitoring/value/resourceMonitoring/status/code
+    - >-
+      #/paths/~1v2~1resourcemonitoring~1address~1{resourceMonitoringId}/delete/responses/401/content/application~1json/examples/Not
+      Authorized/value/errors/0/code
+    - >-
+      #/paths/~1v2~1resourcemonitoring~1address~1{resourceMonitoringId}/patch/responses/200/content/application~1json/examples/Update
+      Resource Monitoring/value/resourceMonitoring/status/code
+    - >-
+      #/paths/~1v2~1resourcemonitoring~1address~1{resourceMonitoringId}/patch/responses/401/content/application~1json/examples/Not
+      Authorized/value/errors/0/code
+    - >-
+      #/paths/~1v2~1resourcemonitoring~1addresses/get/responses/200/content/application~1json/examples/List
+      Resource Monitoring/value/0/resourceMonitoring/status/code
+    - >-
+      #/paths/~1v2~1resourcemonitoring~1addresses/get/responses/401/content/application~1json/examples/Not
+      Authorized/value/errors/0/code
+    - >-
+      #/paths/~1v2~1resourcemonitoring~1smartcontractevent/post/responses/200/content/application~1json/examples/Create
+      Smart Contract Monitoring/value/resourceMonitoring/status/code
+    - >-
+      #/paths/~1v2~1resourcemonitoring~1smartcontractevent/post/responses/200/content/application~1json/examples/Create
+      Smart Contract Monitoring/value/subscriptionDetails/status/code
+    - >-
+      #/paths/~1v2~1resourcemonitoring~1smartcontractevent/post/responses/401/content/application~1json/examples/Not
+      Authorized/value/errors/0/code
+    - >-
+      #/paths/~1v2~1tokenise~1tokens~1nonfungible/get/responses/200/content/application~1json/examples/Tokens/value
+    - >-
+      #/paths/~1v2~1tokenise~1tokens~1nonfungible/get/responses/401/content/application~1json/examples/Bad
+      Request/value/errors
+    - >-
+      #/paths/~1v2~1tokenise~1tokens~1nonfungible/get/responses/401/content/application~1json/examples/Bad
+      Request/value/errorCount
+    - >-
+      #/paths/~1v2~1execution~1nativetransaction/post/responses/200/content/application~1json/examples/Execute
+      Response/value/status/code
+    - >-
+      #/paths/~1v2~1execution~1nativetransaction/post/responses/401/content/application~1json/examples/Not
+      Authorized/value/errors/0/code
+    - >-
+      #/paths/~1v2~1webhook~1subscriptions/get/responses/200/content/application~1json/examples/200
+      List Subscriptions/value/0/subscriptionDetails/status/code
+    - >-
+      #/paths/~1v2~1webhook~1subscriptions/get/responses/200/content/application~1json/examples/200
+      List Subscriptions/value/1/subscriptionDetails/status/code
+    - >-
+      #/paths/~1v2~1webhook~1subscriptions/get/responses/401/content/application~1json/examples/Not
+      Authorized/value/errors/0/code
+    - >-
+      #/paths/~1v2~1preparation~1search~1transaction/post/responses/401/content/application~1json/examples/Bad
+      Request/value/errors/0/code
+    - >-
+      #/paths/~1v2~1tokenise~1tokens~1subscription~1qrc721~1transfer/post/requestBody/content/application~1json/examples/Subscribe
+      QRC721 Transfer event/value/location
+    - >-
+      #/paths/~1v2~1tokenise~1tokens~1subscription~1qrc721~1transfer/post/requestBody/content/application~1json/examples/Subscribe
+      QRC721 Transfer event/value/callbackUrl
+    - >-
+      #/paths/~1v2~1tokenise~1tokens~1subscription~1qrc721~1transfer/post/requestBody/content/application~1json/examples/Subscribe
+      QRC721 Transfer event/value/type
+    - >-
+      #/paths/~1v2~1tokenise~1tokens~1subscription~1qrc721~1transfer/post/requestBody/content/application~1json/examples/Subscribe
+      QRC721 Transfer event/value/requestDetails
+    - >-
+      #/paths/~1v2~1tokenise~1tokens~1subscription~1qrc721~1transfer/post/responses/401/content/application~1json/examples/Bad
+      Request/value/errors/0/code
+    - >-
+      #/paths/~1v2~1preparation~1search~1smartcontract/post/responses/401/content/application~1json/examples/Bad
+      Request/value/errors/0/code
+    - >-
+      #/paths/~1v2~1execution~1search~1address~1balance/post/responses/401/content/application~1json/examples/Not
+      Authorized/value/errors/0/code
+    - >-
+      #/paths/~1v2~1preparation~1secondaryaccountowner/post/requestBody/content/application~1json/examples/QRC20
+      Secondary Account Credit Transaction/value/type
+    - >-
+      #/paths/~1v2~1preparation~1secondaryaccountowner/post/requestBody/content/application~1json/examples/QRC20
+      Secondary Account Credit Transaction/value/urgency
+    - >-
+      #/paths/~1v2~1preparation~1secondaryaccountowner/post/requestBody/content/application~1json/examples/QRC20
+      Secondary Account Credit Transaction/value/requestDetails/payee
+    - >-
+      #/paths/~1v2~1preparation~1secondaryaccountowner/post/requestBody/content/application~1json/examples/QRC20
+      Secondary Account Credit Transaction/value/requestDetails/payer
+    - >-
+      #/paths/~1v2~1preparation~1secondaryaccountowner/post/requestBody/content/application~1json/examples/QRC20
+      Secondary Account Credit Transaction/value/location
+    - >-
+      #/paths/~1v2~1preparation~1secondaryaccountowner/post/requestBody/content/application~1json/examples/QRC20
+      Secondary Account Credit Transaction/value/requestDetails
+    - >-
+      #/paths/~1v2~1preparation~1secondaryaccountowner/post/requestBody/content/application~1json/examples/QRC20
+      Secondary Account Credit Transaction/value
+    - >-
+      #/paths/~1v2~1preparation~1secondaryaccountowner/post/requestBody/content/application~1json/examples/QRC20
+      Add Secondary Account/value/type
+    - >-
+      #/paths/~1v2~1preparation~1secondaryaccountowner/post/requestBody/content/application~1json/examples/QRC20
+      Add Secondary Account/value/urgency
+    - >-
+      #/paths/~1v2~1preparation~1secondaryaccountowner/post/requestBody/content/application~1json/examples/QRC20
+      Add Secondary Account/value/requestDetails/overledgerSigningType
+    - >-
+      #/paths/~1v2~1preparation~1secondaryaccountowner/post/requestBody/content/application~1json/examples/QRC20
+      Add Secondary Account/value/location
+    - >-
+      #/paths/~1v2~1preparation~1secondaryaccountowner/post/requestBody/content/application~1json/examples/QRC20
+      Add Secondary Account/value/requestDetails
+    - >-
+      #/paths/~1v2~1preparation~1secondaryaccountowner/post/requestBody/content/application~1json/examples/QRC20
+      Add Secondary Account/value
+    - >-
+      #/paths/~1v2~1preparation~1secondaryaccountowner/post/requestBody/content/application~1json/examples/QRC20
+      Remove Secondary Account/value/type
+    - >-
+      #/paths/~1v2~1preparation~1secondaryaccountowner/post/requestBody/content/application~1json/examples/QRC20
+      Remove Secondary Account/value/urgency
+    - >-
+      #/paths/~1v2~1preparation~1secondaryaccountowner/post/requestBody/content/application~1json/examples/QRC20
+      Remove Secondary Account/value/requestDetails/overledgerSigningType
+    - >-
+      #/paths/~1v2~1preparation~1secondaryaccountowner/post/requestBody/content/application~1json/examples/QRC20
+      Remove Secondary Account/value/location
+    - >-
+      #/paths/~1v2~1preparation~1secondaryaccountowner/post/requestBody/content/application~1json/examples/QRC20
+      Remove Secondary Account/value/requestDetails
+    - >-
+      #/paths/~1v2~1preparation~1secondaryaccountowner/post/requestBody/content/application~1json/examples/QRC20
+      Remove Secondary Account/value
+    - >-
+      #/paths/~1v2~1preparation~1secondaryaccountowner/post/responses/401/content/application~1json/examples/Bad
+      Request/value/errors/0/code
+    - >-
+      #/paths/~1v2~1autoexecution~1search~1address~1sequence~1{addressId}/post/responses/401/content/application~1json/examples/Not
+      Authorized/value/errors/0/code
+    - >-
+      #/paths/~1v2~1autoexecution~1search~1address~1balance~1{addressId}/post/responses/401/content/application~1json/examples/Not
+      Authorized/value/errors/0/code
+    - >-
+      #/paths/~1v2~1autoexecution~1search~1smartcontract/post/responses/200/content/application~1json/examples/Successful
+      Prepare and Failed Execute
+      Response/value/preparationSmartContractSearchResponse
+    - >-
+      #/paths/~1v2~1autoexecution~1search~1smartcontract/post/responses/200/content/application~1json/examples/Successful
+      Prepare and Smart Contract not found Execute
+      Response/value/preparationSmartContractSearchResponse
+    - >-
+      #/paths/~1v2~1autoexecution~1search~1smartcontract/post/responses/200/content/application~1json/examples/Successful
+      Prepare and Execute Response/value/executionSmartContractSearchResponse
+    - >-
+      #/paths/~1v2~1autoexecution~1search~1smartcontract/post/responses/200/content/application~1json/examples/Successful
+      Prepare and Execute Response/value/preparationSmartContractSearchResponse
+    - >-
+      #/paths/~1v2~1autoexecution~1search~1smartcontract/post/responses/401/content/application~1json/examples/Not
+      Authorized/value/errors/0/code
+    - >-
+      #/paths/~1v2~1resourcemonitoring~1smartcontractevents/get/responses/200/content/application~1json/examples/List
+      Resource Monitoring/value/0/resourceMonitoring/status/code
+    - >-
+      #/paths/~1v2~1resourcemonitoring~1smartcontractevents/get/responses/401/content/application~1json/examples/Not
+      Authorized/value/errors/0/code
+    - >-
+      #/paths/~1v2~1tokenise~1tokens~1{flowType}~1contract-owner/post/responses/200/content/application~1json/examples/Contract
+      Owner Of a QRC721 Token Response/value/responseDetails/name
+    - >-
+      #/paths/~1v2~1tokenise~1tokens~1{flowType}~1contract-owner/post/responses/200/content/application~1json/examples/Contract
+      Owner Of a QRC721 Token Response/value/responseDetails/value
+    - >-
+      #/paths/~1v2~1tokenise~1tokens~1{flowType}~1contract-owner/post/responses/401/content/application~1json/examples/Not
+      Authorized/value/errors/0/code
+    - >-
+      #/paths/~1v2~1tokenise~1tokens~1qrc721~1approved-account/post/responses/200/content/application~1json/examples/Approved
+      Account Of a QRC721 Token Response/value/responseDetails/name
+    - >-
+      #/paths/~1v2~1tokenise~1tokens~1qrc721~1approved-account/post/responses/200/content/application~1json/examples/Approved
+      Account Of a QRC721 Token Response/value/responseDetails/value
+    - >-
+      #/paths/~1v2~1tokenise~1tokens~1qrc721~1approved-account/post/responses/401/content/application~1json/examples/Not
+      Authorized/value/errors/0/code
+    - >-
+      #/paths/~1v2~1tokenise~1tokens~1subscription~1qrc721~1collect/post/requestBody/content/application~1json/examples/Subscribe
+      QRC721 Approve Asset Collect event/value/location
+    - >-
+      #/paths/~1v2~1tokenise~1tokens~1subscription~1qrc721~1collect/post/requestBody/content/application~1json/examples/Subscribe
+      QRC721 Approve Asset Collect event/value/callbackUrl
+    - >-
+      #/paths/~1v2~1tokenise~1tokens~1subscription~1qrc721~1collect/post/requestBody/content/application~1json/examples/Subscribe
+      QRC721 Approve Asset Collect event/value/type
+    - >-
+      #/paths/~1v2~1tokenise~1tokens~1subscription~1qrc721~1collect/post/requestBody/content/application~1json/examples/Subscribe
+      QRC721 Approve Asset Collect event/value/requestDetails
+    - >-
+      #/paths/~1v2~1tokenise~1tokens~1subscription~1qrc721~1collect/post/requestBody/content/application~1json/examples/Subscribe
+      QRC721 Collect Asset Event/value/location
+    - >-
+      #/paths/~1v2~1tokenise~1tokens~1subscription~1qrc721~1collect/post/requestBody/content/application~1json/examples/Subscribe
+      QRC721 Collect Asset Event/value/callbackUrl
+    - >-
+      #/paths/~1v2~1tokenise~1tokens~1subscription~1qrc721~1collect/post/requestBody/content/application~1json/examples/Subscribe
+      QRC721 Collect Asset Event/value/type
+    - >-
+      #/paths/~1v2~1tokenise~1tokens~1subscription~1qrc721~1collect/post/requestBody/content/application~1json/examples/Subscribe
+      QRC721 Collect Asset Event/value/requestDetails
+    - >-
+      #/paths/~1v2~1tokenise~1tokens~1subscription~1qrc721~1collect/post/responses/401/content/application~1json/examples/Bad
+      Request/value/errors/0/code
+    - >-
+      #/paths/~1v2~1execution~1search~1block/post/responses/200/content/application~1json/examples/Execute
+      Response/value/status/code
+    - >-
+      #/paths/~1v2~1execution~1search~1block/post/responses/401/content/application~1json/examples/Not
+      Authorized/value/errors/0/code
+    - >-
+      #/paths/~1v2~1mdapptransactions/get/responses/200/content/application~1json/examples/List
+      Overledger Transactions/value/0/timestamp
+    - >-
+      #/paths/~1v2~1mdapptransactions/get/responses/200/content/application~1json/examples/List
+      Overledger Transactions/value/0/status/code
+    - >-
+      #/paths/~1v2~1mdapptransactions/get/responses/200/content/application~1json/examples/List
+      Overledger Transactions/value/1/timestamp
+    - >-
+      #/paths/~1v2~1mdapptransactions/get/responses/200/content/application~1json/examples/List
+      Overledger Transactions/value/1/status/code
+    - >-
+      #/paths/~1v2~1mdapptransactions/get/responses/401/content/application~1json/examples/Not
+      Authorized/value/errors/0/code
+    - >-
+      #/paths/~1v2~1execution~1transaction/post/responses/200/content/application~1json/examples/Smart
+      Contract Invoke/value/status/code
+    - >-
+      #/paths/~1v2~1execution~1transaction/post/responses/200/content/application~1json/examples/XRP
+      Ledger/value/status/code
+    - >-
+      #/paths/~1v2~1execution~1transaction/post/responses/200/content/application~1json/examples/Bitcoin/value/status/code
+    - >-
+      #/paths/~1v2~1execution~1transaction/post/responses/200/content/application~1json/examples/Ethereum/value/status/code
+    - >-
+      #/paths/~1v2~1execution~1transaction/post/responses/401/content/application~1json/examples/Not
+      Authorized/value/errors/0/code
+    - >-
+      #/paths/~1v2~1preparation~1nativetransaction/post/responses/401/content/application~1json/examples/Bad
+      Request/value/errors/0/code
+    - >-
+      #/paths/~1v2~1preparation~1search~1address~1balance~1{addressId}/post/responses/401/content/application~1json/examples/Bad
+      Request/value/errors/0/code
+    - >-
+      #/paths/~1v2~1resourcemonitoring/get/responses/200/content/application~1json/examples/List
+      Resource Monitoring/value/0/resourceMonitoring/status/code
+    - >-
+      #/paths/~1v2~1resourcemonitoring/get/responses/401/content/application~1json/examples/Not
+      Authorized/value/errors/0/code
+    - >-
+      #/paths/~1v2~1tokenise~1tokens~1qrc20~1account-balance/post/requestBody/content/application~1json/examples/Account
+      balance for a QRC20 token/value/requestDetails/owner
+    - >-
+      #/paths/~1v2~1tokenise~1tokens~1qrc20~1account-balance/post/responses/200/content/application~1json/examples/Account
+      Balance Of a QRC20 Token Response/value
+    - >-
+      #/paths/~1v2~1tokenise~1tokens~1qrc20~1account-balance/post/responses/401/content/application~1json/examples/Not
+      Authorized/value/errors/0/code
+    - >-
+      #/paths/~1v2~1autoexecution~1search~1utxo~1{utxoId}/post/responses/200/content/application~1json/examples/Successful
+      Prepare and Execute
+      Response/value/executionUtxoSearchResponse/destination/0/smartContract/detail
+    - >-
+      #/paths/~1v2~1autoexecution~1search~1utxo~1{utxoId}/post/responses/200/content/application~1json/examples/Successful
+      Prepare and Execute Response/value/executionUtxoSearchResponse/status/code
+    - >-
+      #/paths/~1v2~1autoexecution~1search~1utxo~1{utxoId}/post/responses/401/content/application~1json/examples/Not
+      Authorized/value/errors/0/code
+    - >-
+      #/paths/~1v2~1preparation~1credit/post/requestBody/content/application~1json/examples/QRC20
+      Create Credit/value/type
+    - >-
+      #/paths/~1v2~1preparation~1credit/post/requestBody/content/application~1json/examples/QRC20
+      Create Credit/value/urgency
+    - >-
+      #/paths/~1v2~1preparation~1credit/post/responses/401/content/application~1json/examples/Bad
+      Request/value/errors/0/code
+    - >-
+      #/paths/~1v2~1autoexecution~1search~1block~1{blockId}/post/responses/200/content/application~1json/examples/Successful
+      Prepare and Execute
+      Response/value/executionBlockSearchResponse/status/code
+    - >-
+      #/paths/~1v2~1autoexecution~1search~1block~1{blockId}/post/responses/401/content/application~1json/examples/Not
+      Authorized/value/errors/0/code
+    - >-
+      #/paths/~1v2~1tokenise~1tokens~1subscription~1{flowtype}~1supply/post/requestBody/content/application~1json/examples/Subscribe
+      QRC721 supply burn event/value/location
+    - >-
+      #/paths/~1v2~1tokenise~1tokens~1subscription~1{flowtype}~1supply/post/requestBody/content/application~1json/examples/Subscribe
+      QRC721 supply burn event/value/callbackUrl
+    - >-
+      #/paths/~1v2~1tokenise~1tokens~1subscription~1{flowtype}~1supply/post/requestBody/content/application~1json/examples/Subscribe
+      QRC721 supply burn event/value/type
+    - >-
+      #/paths/~1v2~1tokenise~1tokens~1subscription~1{flowtype}~1supply/post/requestBody/content/application~1json/examples/Subscribe
+      QRC721 supply burn event/value/requestDetails
+    - >-
+      #/paths/~1v2~1tokenise~1tokens~1subscription~1{flowtype}~1supply/post/requestBody/content/application~1json/examples/Subscribe
+      To QRC20 Burn Tokens Event/value/location
+    - >-
+      #/paths/~1v2~1tokenise~1tokens~1subscription~1{flowtype}~1supply/post/requestBody/content/application~1json/examples/Subscribe
+      To QRC20 Burn Tokens Event/value/callbackUrl
+    - >-
+      #/paths/~1v2~1tokenise~1tokens~1subscription~1{flowtype}~1supply/post/requestBody/content/application~1json/examples/Subscribe
+      To QRC20 Burn Tokens Event/value/type
+    - >-
+      #/paths/~1v2~1tokenise~1tokens~1subscription~1{flowtype}~1supply/post/requestBody/content/application~1json/examples/Subscribe
+      To QRC20 Burn Tokens Event/value/requestDetails
+    - >-
+      #/paths/~1v2~1tokenise~1tokens~1subscription~1{flowtype}~1supply/post/requestBody/content/application~1json/examples/Subscribe
+      To QRC20 Mint Tokens Event/value/location
+    - >-
+      #/paths/~1v2~1tokenise~1tokens~1subscription~1{flowtype}~1supply/post/requestBody/content/application~1json/examples/Subscribe
+      To QRC20 Mint Tokens Event/value/callbackUrl
+    - >-
+      #/paths/~1v2~1tokenise~1tokens~1subscription~1{flowtype}~1supply/post/requestBody/content/application~1json/examples/Subscribe
+      To QRC20 Mint Tokens Event/value/type
+    - >-
+      #/paths/~1v2~1tokenise~1tokens~1subscription~1{flowtype}~1supply/post/requestBody/content/application~1json/examples/Subscribe
+      To QRC20 Mint Tokens Event/value/requestDetails
+    - >-
+      #/paths/~1v2~1tokenise~1tokens~1subscription~1{flowtype}~1supply/post/requestBody/content/application~1json/examples/Subscribe
+      QRC721 supply mint event/value/location
+    - >-
+      #/paths/~1v2~1tokenise~1tokens~1subscription~1{flowtype}~1supply/post/requestBody/content/application~1json/examples/Subscribe
+      QRC721 supply mint event/value/callbackUrl
+    - >-
+      #/paths/~1v2~1tokenise~1tokens~1subscription~1{flowtype}~1supply/post/requestBody/content/application~1json/examples/Subscribe
+      QRC721 supply mint event/value/type
+    - >-
+      #/paths/~1v2~1tokenise~1tokens~1subscription~1{flowtype}~1supply/post/requestBody/content/application~1json/examples/Subscribe
+      QRC721 supply mint event/value/requestDetails
+    - >-
+      #/paths/~1v2~1tokenise~1tokens~1subscription~1{flowtype}~1supply/post/responses/401/content/application~1json/examples/Bad
+      Request/value/errors/0/code
+    - >-
+      #/paths/~1v2~1tokenise~1tokens~1qrc20~1approved-debit-amount/post/requestBody/content/application~1json/examples/Approved
+      Debit Amount of a QRC20 token/value/requestDetails/payer
+    - >-
+      #/paths/~1v2~1tokenise~1tokens~1qrc20~1approved-debit-amount/post/requestBody/content/application~1json/examples/Approved
+      Debit Amount of a QRC20 token/value/requestDetails/tokenUnit
+    - >-
+      #/paths/~1v2~1tokenise~1tokens~1qrc20~1approved-debit-amount/post/requestBody/content/application~1json/examples/Approved
+      Debit Amount of a QRC20 token/value/requestDetails/mandate
+    - >-
+      #/paths/~1v2~1tokenise~1tokens~1qrc20~1approved-debit-amount/post/responses/200/content/application~1json/examples/Account
+      Balance Of a QRC20 Token Response/value
+    - >-
+      #/paths/~1v2~1tokenise~1tokens~1qrc20~1approved-debit-amount/post/responses/401/content/application~1json/examples/Not
+      Authorized/value/errors/0/code
+    - >-
+      #/paths/~1v2~1tokenise~1tokens~1qrc721~1token-count/post/responses/200/content/application~1json/examples/Token
+      Count Response/value/responseDetails/name
+    - >-
+      #/paths/~1v2~1tokenise~1tokens~1qrc721~1token-count/post/responses/200/content/application~1json/examples/Token
+      Count Response/value/responseDetails/value
+    - >-
+      #/paths/~1v2~1tokenise~1tokens~1qrc721~1token-count/post/responses/401/content/application~1json/examples/Not
+      Authorized/value/errors/0/code
+    - >-
+      #/paths/~1v2~1tokenise~1tokens~1qrc721~1token-uri/post/responses/200/content/application~1json/examples/URI
+      Of a QRC721 Token Response/value/responseDetails/name
+    - >-
+      #/paths/~1v2~1tokenise~1tokens~1qrc721~1token-uri/post/responses/200/content/application~1json/examples/URI
+      Of a QRC721 Token Response/value/responseDetails/value
+    - >-
+      #/paths/~1v2~1tokenise~1tokens~1qrc721~1token-uri/post/responses/401/content/application~1json/examples/Not
+      Authorized/value/errors/0/code
+    - >-
+      #/paths/~1v2~1tokenise~1preparation~1transaction~1qrc721~1collect/post/requestBody/content/application~1json/examples/Prepare
+      Approve collect for QRC721/value/type
+    - >-
+      #/paths/~1v2~1tokenise~1preparation~1transaction~1qrc721~1collect/post/requestBody/content/application~1json/examples/Prepare
+      Approve collect for QRC721/value/urgency
+    - >-
+      #/paths/~1v2~1tokenise~1preparation~1transaction~1qrc721~1collect/post/requestBody/content/application~1json/examples/Prepare
+      Approve collect for QRC721/value/requestDetails
+    - >-
+      #/paths/~1v2~1tokenise~1preparation~1transaction~1qrc721~1collect/post/requestBody/content/application~1json/examples/Prepare
+      Approve collect for QRC721/value/requestDetails/owner
+    - >-
+      #/paths/~1v2~1tokenise~1preparation~1transaction~1qrc721~1collect/post/requestBody/content/application~1json/examples/Prepare
+      Approve collect for QRC721/value/requestDetails/collector
+    - >-
+      #/paths/~1v2~1tokenise~1preparation~1transaction~1qrc721~1collect/post/requestBody/content/application~1json/examples/Prepare
+      Approve collect for QRC721/value/requestDetails/overledgerSigningType
+    - >-
+      #/paths/~1v2~1tokenise~1preparation~1transaction~1qrc721~1collect/post/requestBody/content/application~1json/examples/Prepare
+      Approve collect for QRC721/value
+    - >-
+      #/paths/~1v2~1tokenise~1preparation~1transaction~1qrc721~1collect/post/requestBody/content/application~1json/examples/Prepare
+      Collect for QRC721/value/type
+    - >-
+      #/paths/~1v2~1tokenise~1preparation~1transaction~1qrc721~1collect/post/requestBody/content/application~1json/examples/Prepare
+      Collect for QRC721/value/urgency
+    - >-
+      #/paths/~1v2~1tokenise~1preparation~1transaction~1qrc721~1collect/post/requestBody/content/application~1json/examples/Prepare
+      Collect for QRC721/value/requestDetails
+    - >-
+      #/paths/~1v2~1tokenise~1preparation~1transaction~1qrc721~1collect/post/requestBody/content/application~1json/examples/Prepare
+      Collect for QRC721/value/requestDetails/owner
+    - >-
+      #/paths/~1v2~1tokenise~1preparation~1transaction~1qrc721~1collect/post/requestBody/content/application~1json/examples/Prepare
+      Collect for QRC721/value/requestDetails/collector
+    - >-
+      #/paths/~1v2~1tokenise~1preparation~1transaction~1qrc721~1collect/post/requestBody/content/application~1json/examples/Prepare
+      Collect for QRC721/value/requestDetails/overledgerSigningType
+    - >-
+      #/paths/~1v2~1tokenise~1preparation~1transaction~1qrc721~1collect/post/requestBody/content/application~1json/examples/Prepare
+      Collect for QRC721/value
+    - >-
+      #/paths/~1v2~1tokenise~1preparation~1transaction~1qrc721~1collect/post/responses/401/content/application~1json/examples/Bad
+      Request/value/errors/0/code
+    - >-
+      #/paths/~1v2~1execution~1search~1utxo/post/responses/200/content/application~1json/examples/Execute
+      Response/value/status/code
+    - >-
+      #/paths/~1v2~1execution~1search~1utxo/post/responses/200/content/application~1json/examples/Execute
+      Response/value/nativeData/vout/0/scriptPubKey/reqSigs
+    - >-
+      #/paths/~1v2~1execution~1search~1utxo/post/responses/401/content/application~1json/examples/Not
+      Authorized/value/errors/0/code
+    - >-
+      #/paths/~1v2~1preparation~1supply/post/requestBody/content/application~1json/examples/QRC20
+      Burn Tokens/value/type
+    - >-
+      #/paths/~1v2~1preparation~1supply/post/requestBody/content/application~1json/examples/QRC20
+      Burn Tokens/value/urgency
+    - >-
+      #/paths/~1v2~1preparation~1supply/post/requestBody/content/application~1json/examples/QRC20
+      Burn Tokens/value/requestDetails/owner
+    - >-
+      #/paths/~1v2~1preparation~1supply/post/requestBody/content/application~1json/examples/QRC20
+      Burn Tokens/value
+    - >-
+      #/paths/~1v2~1preparation~1supply/post/requestBody/content/application~1json/examples/QRC20
+      Mint Tokens/value/type
+    - >-
+      #/paths/~1v2~1preparation~1supply/post/requestBody/content/application~1json/examples/QRC20
+      Mint Tokens/value/urgency
+    - >-
+      #/paths/~1v2~1preparation~1supply/post/requestBody/content/application~1json/examples/QRC20
+      Mint Tokens/value/requestDetails/beneficiary/mint/amount
+    - >-
+      #/paths/~1v2~1preparation~1supply/post/requestBody/content/application~1json/examples/QRC20
+      Mint Tokens/value/requestDetails/creator
+    - >-
+      #/paths/~1v2~1preparation~1supply/post/requestBody/content/application~1json/examples/QRC20
+      Mint Tokens/value/requestDetails/beneficiary
+    - >-
+      #/paths/~1v2~1preparation~1supply/post/requestBody/content/application~1json/examples/QRC20
+      Mint Tokens/value
+    - >-
+      #/paths/~1v2~1preparation~1supply/post/responses/401/content/application~1json/examples/Bad
+      Request/value/errors/0/code
+    - >-
+      #/paths/~1v2~1webhook~1subscription/post/responses/200/content/application~1json/examples/Create
+      Subscription/value/0/subscriptionDetails
+    - >-
+      #/paths/~1v2~1webhook~1subscription/post/responses/400/content/application~1json/examples/400
+      Bad Request/value/category
+    - >-
+      #/paths/~1v2~1webhook~1subscription/post/responses/400/content/application~1json/examples/400
+      Bad Request/value/description
+    - >-
+      #/paths/~1v2~1webhook~1subscription/post/responses/400/content/application~1json/examples/400
+      Bad Request/value/code
+    - >-
+      #/paths/~1v2~1webhook~1subscription/post/responses/401/content/application~1json/examples/Not
+      Authorized/value/errors/0/code
+    - >-
+      #/paths/~1v2~1webhook~1subscription/post/responses/404/content/application~1json/examples/404
+      Not Found/value/category
+    - >-
+      #/paths/~1v2~1webhook~1subscription/post/responses/404/content/application~1json/examples/404
+      Not Found/value/description
+    - >-
+      #/paths/~1v2~1webhook~1subscription/post/responses/404/content/application~1json/examples/404
+      Not Found/value/code
+  no-unused-components:
+    - '#/components/schemas/Parameter'
+  security-defined:
+    - '#/paths/~1v2~1nonfungibletoken/get'
+    - '#/paths/~1v2~1tokenise~1tokens~1subscription~1qrc20~1credit/post'
+    - '#/paths/~1v2~1tokens~1fungible/get'
+    - '#/paths/~1v2~1tokenise~1tokens~1subscription~1qrc20~1debit/post'
+    - >-
+      #/paths/~1v2~1tokenise~1tokens~1subscription~1qrc20~1secondaryaccountowner/post
+    - '#/paths/~1v2~1tokenise~1tokens~1nonfungible/get'
+    - '#/paths/~1v2~1tokenise~1tokens~1subscription~1qrc721~1transfer/post'
+    - '#/paths/~1v2~1token~1fungible/get'
+    - '#/paths/~1v2~1tokenise~1tokens~1subscription~1qrc721~1collect/post'
+    - '#/paths/~1v2~1tokenise~1tokens~1subscription~1{flowtype}~1supply/post'
