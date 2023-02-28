@@ -24,7 +24,7 @@ jobs:
       - name: Get the Documentation Yaml File
         run: |
           curl -o doc.json https://api.sandbox.overledger.io/v2/documentation/service/Overledger%20Core%20API/
-          yq r -j out.json> openapi.yaml
+          yq r -j doc.json > openapi.yaml
       - name: Build and publish API documentation
         env:
           REDOCLY_AUTHORIZATION: sk_Mcz0MgCveDov4QxfeZbIaM7VcrY=_LZNCvltY4oj/wze3va7LZg2C9Bgy1+Ac/wQXdram3ow=
