@@ -1,0 +1,32 @@
+# This is a basic workflow that is manually triggered
+
+name: Manual Push Based workflow
+
+# Controls when the action will run. Workflow runs when manually triggered using the UI
+# or API.
+on:
+  workflow_dispatch:
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  publish-api-docs:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Install dependencies
+        run: |
+          npm install redoc-cli
+          npm install -g redoc-cli
+          npm i -g @redocly/cli@latest
+          sudo snap install yq --channel=v3/stable
+      - name: Get the Documentation Yaml File
+        run: |
+          curl -o doc.json https://api.sandbox.overledger.io/v2/documentation/service/Overledger%20Core%20API/
+          yq r -j doc.json > openapi.yaml
+      - name: Build and publish API documentation
+        env:
+          REDOCLY_AUTHORIZATION: sk_Mcz0MgCveDov4QxfeZbIaM7VcrY=_LZNCvltY4oj/wze3va7LZg2C9Bgy1+Ac/wQXdram3ow=
+        run: |
+          npx @redocly/cli@latest push openapi.yaml "@test-redocly-s28/manualPush@v1"
