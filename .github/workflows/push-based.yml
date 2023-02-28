@@ -20,7 +20,7 @@ jobs:
           npm install redoc-cli
           npm install -g redoc-cli
           npm i -g @redocly/cli@latest
-          brew install yq@3
+          snap install yq --channel=v3/stable
       - name: Get the Documentation Yaml File
         run: |
           curl -o doc.json https://api.sandbox.overledger.io/v2/documentation/service/Overledger%20Core%20API/
