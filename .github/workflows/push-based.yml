@@ -22,6 +22,6 @@ jobs:
           npm i -g @redocly/cli@latest
       - name: Build and publish API documentation
         env:
-          REDOCLY_AUTHORIZATION: sk_Mcz0MgCveDov4QxfeZbIaM7VcrY=_LZNCvltY4oj/wze3va7LZg2C9Bgy1+Ac/wQXdram3ow=
+          REDOCLY_AUTHORIZATION: ${{ secrets.TEST_API_KEY }}
         run: |
-          npx @redocly/cli@latest push openapi.yaml "@test-redocly-s28/manualAction@v1" REDOCLY_AUTHORIZATION=sk_Mcz0MgCveDov4QxfeZbIaM7VcrY=_LZNCvltY4oj/wze3va7LZg2C9Bgy1+Ac/wQXdram3ow=
+          npx @redocly/cli@latest push openapi.yaml "@test-redocly-s28/manualAction@v1" REDOCLY_AUTHORIZATION=${{ secrets.TEST_API_KEY }}
