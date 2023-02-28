@@ -25,4 +25,4 @@ jobs:
           REDOCLY_API_KEY: ${{ secrets.TEST_API_KEY }}
           REPO_NAME: "nahid-b/RedoclyTestActions"
         run: |
-          REDOCLY_API_KEY npx @redocly/cli@latest push openapi.yaml "@test-redocly-s28/manualAction@v1
+          REDOCLY_API_KEY npx @redocly/cli@latest push openapi.yaml "@test-redocly-s28/manualAction@v1"
