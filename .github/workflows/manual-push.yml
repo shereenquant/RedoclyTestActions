@@ -4,6 +4,8 @@ name: Additional Push
 
 # Controls when the action will run. Workflow runs when manually triggered using the UI
 # or API.
+
+
 on:
   workflow_dispatch:
 
@@ -14,6 +16,12 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
+
+      - name: Get Secret
+        with: # Set API secret as an input
+          credentials: ${{ secrets.REDOCLY_API_KEY }}
+          env: # Or as an environment variable
+            credentials: ${{ secrets.REDOCLY_API_KEY }}
 
       - name: Install dependencies
         run: |
@@ -27,6 +35,6 @@ jobs:
           yq r -j doc.json > openapi.yaml
       - name: Build and publish API documentation
         env:
-          REDOCLY_AUTHORIZATION: sk_Mcz0MgCveDov4QxfeZbIaM7VcrY=_LZNCvltY4oj/wze3va7LZg2C9Bgy1+Ac/wQXdram3ow=
+          REDOCLY_AUTHORIZATION: ${{env.credentials}}
         run: |
           npx @redocly/cli@latest push openapi.yaml "@test-redocly-s28/manualPush@v1"
