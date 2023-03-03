@@ -16,8 +16,6 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
-
-      - name: Get Secret
         with: # Set API secret as an input
           credentials: ${{ secrets.REDOCLY_API_KEY }}
           env: # Or as an environment variable
