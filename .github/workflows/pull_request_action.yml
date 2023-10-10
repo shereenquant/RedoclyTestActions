@@ -37,4 +37,4 @@ jobs:
         env:
           REDOCLY_AUTHORIZATION: ${{ secrets.TEST_KEY }}
         run: |
-          npx @redocly/cli@latest push openapi.yaml --destination=OVL@v1 --organization=test-bjg
+          npx @redocly/cli@latest push openapi.yaml "@test-bjg/OVL@v1"
