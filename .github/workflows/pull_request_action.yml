@@ -1,0 +1,40 @@
+# This is a basic workflow to help you get started with Actions
+
+name: CI
+
+# Controls when the workflow will run
+on:
+  # Triggers the workflow on push or pull request events but only for the "main" branch
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  # This workflow contains a single job called "build"
+  build:
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v3
+
+      - name: Install dependencies
+        run: |
+          npm install redoc-cli
+          npm install -g redoc-cli
+          npm i -g @redocly/cli@latest
+          sudo snap install yq --channel=v3/stable
+      - name: Get the Documentation Yaml File
+        run: |
+          curl -o doc.json https://api.sandbox.overledger.io/v2/documentation/service/Overledger%20Core%20API/
+          yq r -j doc.json > openapi.yaml
+      - name: Build and publish API documentation
+        env:
+          REDOCLY_AUTHORIZATION: ${{ secrets.TEST_KEY }}
+        run: |
+          npx @redocly/cli@latest push openapi.yaml --destination=OVL@v1 --organization=test-bjg
