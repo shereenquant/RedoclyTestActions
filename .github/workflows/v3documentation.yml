@@ -33,8 +33,8 @@ jobs:
         id: generate_token
         uses: actions/create-github-app-token@v1
         with:
-          app_id: "7da2u4la3apnirvdodpkbck2au"
-          private_key: "12fmg7pfu60b1g2jg50piccqdm5gmu27ha8ginke1cb96k3jgal4"
+          app-id: 7da2u4la3apnirvdodpkbck2au
+          private-key: 12fmg7pfu60b1g2jg50piccqdm5gmu27ha8ginke1cb96k3jgal4
       - name: Get the Documentation Yaml File
         env:
           GH_TOKEN: ${{ steps.generate_token.outputs.token }}
