@@ -7,8 +7,8 @@ on:
   # Triggers the workflow on push or pull request events but only for the "main" branch
   push:
     branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
+ # pull_request:
+   # branches: [ "main" ]
   workflow_dispatch:
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
@@ -35,6 +35,6 @@ jobs:
           yq r -j doc.json > openapi.yaml
       - name: Build and publish API documentation
         env:
-          REDOCLY_AUTHORIZATION: ${{ secrets.TEST_KEY }}
+          REDOCLY_AUTHORIZATION: ${{ secrets.TEST_AUTOMATED_PIPELINE }}
         run: |
-          npx @redocly/cli@latest push openapi.yaml --destination="Test@v1" --organization="test-bjg"
+          npx @redocly/cli@latest push openapi.yaml --destination="API Docs Testing@V2.0" --organization="quant-network"
