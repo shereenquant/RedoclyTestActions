@@ -39,7 +39,7 @@ jobs:
         env:
           GH_TOKEN: ${{ steps.generate_token.outputs.token }}
         run: |
-          curl -o doc.json https://api.sandbox.overledger.io/documentation/
+          curl -o doc.json https://api.sandbox.overledger.io/documentation/ --header 'Authorization: Bearer ${{ steps.generate_token.outputs.token }}' 
           yq r -j doc.json > openapi.yaml
       - name: Build and publish API documentation
         env:
