@@ -30,11 +30,18 @@ jobs:
           npm i -g @redocly/cli@latest
           sudo snap install yq --channel=v3/stable
       - name: Generate token
+        id: generate-token
         run: |
-          echo "TOKEN = $(curl -X POST -u "r0ha1jskkoeus11vm5616timb:ievds2o7vmc22drlns0st2d6kaf4qk0p05qa17iq31f771rocg4" -d "grant_type=client_credentials" https://sb-use1-overledger-1.auth.us-east-1.amazoncognito.com/token)" >> $GITHUB_OUTPUT
+          token_response=$(curl -X POST -u "r0ha1jskkoeus11vm5616timb:ievds2o7vmc22drlns0st2d6kaf4qk0p05qa17iq31f771rocg4" -d "grant_type=client_credentials" https://sb-use1-overledger-1.auth.us-east-1.amazoncognito.com/token)
+          echo "::set-output name=token_response::$token_response"
+      - name: Extract Token
+        id: extract-token
+        run: |
+          token=$(echo ${{ steps.generate-token.outputs.token_response }} | jq -r '.access_token')
+          echo "::set-output name=token::$token"
       - name: Get the Documentation Yaml File
         run: |
-          curl -o doc.json https://api.sandbox.overledger.io/documentation/ --header 'Authorization: Bearer ${{ steps.generate_token.outputs.TOKEN }}' 
+          curl -o doc.json https://api.sandbox.overledger.io/documentation/ --header 'Authorization: Bearer ${{ steps.extract-token.outputs.token }}' 
           yq r -j doc.json > openapi.yaml
       - name: Build and publish API documentation
         env:
