@@ -41,11 +41,16 @@ jobs:
       - name: Extract Token
         id: extract-token
         run: |
-          token=$(echo ${{ steps.generate-token.outputs.token_response }} | jq '.access_token | tostring')
-          echo "::set-output name=token::$token"
+          token_response="${{ steps.generate-token.outputs.token_response }}"
+          access_token=$(echo "$token_response" | jq -r '.access_token')
+          if [[ "$access_token" =~ ^[0-9]+$ ]]; then
+            access_token="$access_token"
+          fi
+            echo "::set-env name=API_TOKEN::$access_token"
+        shell: bash
       - name: Get the Documentation Yaml File
         run: |
-          curl -o doc.json https://api.sandbox.overledger.io/documentation/ --header 'Authorization: Bearer ${{ steps.extract-token.outputs.token }}' 
+          curl -o doc.json https://api.sandbox.overledger.io/documentation/ --header 'Authorization: Bearer ${{ steps.extract-token.outputs.access_token }}' 
           yq r -j doc.json > openapi.yaml
       - name: Build and publish API documentation
         env:
