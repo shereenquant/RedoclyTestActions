@@ -30,16 +30,13 @@ jobs:
           npm i -g @redocly/cli@latest
           sudo snap install yq --channel=v3/stable
       - name: Generate token
-        id: generate_token
-        uses: actions/create-github-app-token@v1
-        with:
-          app-id: ${{ vars.DEVELOPER_TEST_CLIENT_ID }}
-          private-key: ${{ secrets.DEVELOPER_TEST_CLIENT_SECRET }}
+        run: |
+          curl https://sb-use1-overledger-1.auth.us-east-1.amazoncognito.com/token?grant_type=client_credentials --header 'Authorization: Basic cjBoYTFqc2trb2V1czExdm01NjE2dGltYjppZXZkczJvN3ZtYzIyZHJsbnMwc3QyZDZrYWY0cWswcDA1cWExN2lxMzFmNzcxcm9jZzQK' --header 'Content-Type: application/x-www-form-urlencoded'
       - name: Get the Documentation Yaml File
         env:
           GH_TOKEN: ${{ steps.generate_token.outputs.token }}
         run: |
-          curl -o doc.json https://api.sandbox.overledger.io/documentation/ --header 'Authorization: Bearer ${{ steps.generate_token.outputs.token }}' 
+          curl -o doc.json https://api.sandbox.overledger.io/documentation/ --header 'Authorization: Bearer ${{ steps.generate_token.outputs.accessToken }}' 
           yq r -j doc.json > openapi.yaml
       - name: Build and publish API documentation
         env:
