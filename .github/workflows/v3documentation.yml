@@ -37,7 +37,7 @@ jobs:
       - name: Extract Token
         id: extract-token
         run: |
-          token=$(echo ${{ steps.generate-token.outputs.token_response }} | jq -r '.access_token')
+          token=$(echo ${{ steps.generate-token.outputs.token_response }} | jq '.access_token')
           echo "::set-output name=token::$token"
       - name: Get the Documentation Yaml File
         run: |
