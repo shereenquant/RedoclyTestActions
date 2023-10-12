@@ -31,7 +31,7 @@ jobs:
           sudo snap install yq --channel=v3/stable
       - name: Generate token
         run: |
-          echo "TOKEN = $(curl -X POST -u "r0ha1jskkoeus11vm5616timb:ievds2o7vmc22drlns0st2d6kaf4qk0p05qa17iq31f771rocg4" -d "grant_type=client_credentials" https://sb-use1-overledger-1.auth.us-east-1.amazoncognito.com/token | jq -r '.access_token')" >> $GITHUB_OUTPUT
+          echo "TOKEN = $(curl -X POST -u "r0ha1jskkoeus11vm5616timb:ievds2o7vmc22drlns0st2d6kaf4qk0p05qa17iq31f771rocg4" -d "grant_type=client_credentials" https://sb-use1-overledger-1.auth.us-east-1.amazoncognito.com/token)" >> $GITHUB_OUTPUT
       - name: Get the Documentation Yaml File
         run: |
           curl -o doc.json https://api.sandbox.overledger.io/documentation/ --header 'Authorization: Bearer ${{ steps.generate_token.outputs.TOKEN }}' 
