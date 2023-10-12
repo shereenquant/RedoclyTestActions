@@ -34,10 +34,14 @@ jobs:
         run: |
           token_response=$(curl -X POST -u "7da2u4la3apnirvdodpkbck2au:12fmg7pfu60b1g2jg50piccqdm5gmu27ha8ginke1cb96k3jgal4" -d "grant_type=client_credentials" https://auth.overledger.io/oauth2/token)
           echo "::set-output name=token_response::$token_response"
+      - name: Debug Token Response
+        run: |
+          echo "Token Response: ${{ steps.generate-token.outputs.token_response }}"
+        shell: bash
       - name: Extract Token
         id: extract-token
         run: |
-          token=$(echo ${{ steps.generate-token.outputs.token_response }} | jq '.access_token')
+          token=$(echo ${{ steps.generate-token.outputs.token_response }} | jq '.access_token | tostring')
           echo "::set-output name=token::$token"
       - name: Get the Documentation Yaml File
         run: |
