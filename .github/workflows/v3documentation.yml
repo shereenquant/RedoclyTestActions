@@ -41,8 +41,8 @@ jobs:
       - name: Extract Token
         id: extract-token
         run: |
-          token_response="${{ steps.generate-token.outputs.token_response }}"
-          access_token=$(echo "$token_response" | jq -r '.access_token')
+          token_respons="${{ steps.generate-token.outputs.token_response }}"
+          access_token=$(echo "$token_respons" | jq -r '.access_token')
           if [[ "$access_token" =~ ^[0-9]+$ ]]; then
             access_token="$access_token"
           fi
