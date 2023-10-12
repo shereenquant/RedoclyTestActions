@@ -32,25 +32,17 @@ jobs:
       - name: Generate token
         id: generate-token
         run: |
-          token_response=$(curl -X POST -u "7da2u4la3apnirvdodpkbck2au:12fmg7pfu60b1g2jg50piccqdm5gmu27ha8ginke1cb96k3jgal4" -d "grant_type=client_credentials" https://auth.overledger.io/oauth2/token)
+          token_response=$(curl -s -X POST -u "7da2u4la3apnirvdodpkbck2au:12fmg7pfu60b1g2jg50piccqdm5gmu27ha8ginke1cb96k3jgal4" -d "grant_type=client_credentials" https://auth.overledger.io/oauth2/token)
           echo "::set-output name=token_response::$token_response"
-      - name: Debug Token Response
-        run: |
-          echo "Token Response: ${{ steps.generate-token.outputs.token_response }}"
-        shell: bash
       - name: Extract Token
         id: extract-token
         run: |
-          token_respons="${{ steps.generate-token.outputs.token_response }}"
-          access_token=$(echo "$token_respons" | jq -r '.access_token')
-          if [[ "$access_token" =~ ^[0-9]+$ ]]; then
-            access_token="$access_token"
-          fi
-            echo "::set-env name=API_TOKEN::$access_token"
-        shell: bash
+          token_response="${{ steps.generate-token.outputs.token_response }}"
+          token=$(echo "$token_response" | jq -r '.access_token')
+          echo "::set-output name=API_TOKEN::$token"
       - name: Get the Documentation Yaml File
         run: |
-          curl -o doc.json https://api.sandbox.overledger.io/documentation/ --header 'Authorization: Bearer ${{ steps.extract-token.outputs.access_token }}' 
+          curl -o doc.json https://api.sandbox.overledger.io/documentation/ --header 'Authorization: Bearer ${{ steps.extract-token.outputs.API_TOKEN }}' 
           yq r -j doc.json > openapi.yaml
       - name: Build and publish API documentation
         env:
