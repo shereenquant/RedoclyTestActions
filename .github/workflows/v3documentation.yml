@@ -42,8 +42,11 @@ jobs:
           echo "::set-output name=API_TOKEN::$token"
       - name: Get the Documentation Yaml File
         run: |
-          curl -o doc.json https://api.sandbox.overledger.io/documentation/ --header 'Authorization: Bearer ${{ steps.extract-token.outputs.API_TOKEN }}' 
+          api_token="${{ steps.extract-token.outputs.API_TOKEN }}"
+          curl -o doc.json https://api.sandbox.overledger.io/documentation/ --header "Authorization: Bearer $api_token" 
           yq r -j doc.json > openapi.yaml
+        env:
+          API_TOKEN: ${{ steps.extract-token.outputs.API_TOKEN }}
       - name: Build and publish API documentation
         env:
           REDOCLY_AUTHORIZATION: ${{ secrets.TEST_KEY }}
