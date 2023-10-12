@@ -32,7 +32,7 @@ jobs:
       - name: Generate token
         id: generate-token
         run: |
-          token_response=$(curl -X POST -u "r0ha1jskkoeus11vm5616timb:ievds2o7vmc22drlns0st2d6kaf4qk0p05qa17iq31f771rocg4" -d "grant_type=client_credentials" https://sb-use1-overledger-1.auth.us-east-1.amazoncognito.com/token)
+          token_response=$(curl -X POST -u "7da2u4la3apnirvdodpkbck2au:12fmg7pfu60b1g2jg50piccqdm5gmu27ha8ginke1cb96k3jgal4" -d "grant_type=client_credentials" https://auth.overledger.io/oauth2/token)
           echo "::set-output name=token_response::$token_response"
       - name: Extract Token
         id: extract-token
