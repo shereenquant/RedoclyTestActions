@@ -31,13 +31,12 @@ jobs:
           sudo snap install yq --channel=v3/stable
       - name: Generate token
         run: |
-          curl -X POST -u "r0ha1jskkoeus11vm5616timb:ievds2o7vmc22drlns0st2d6kaf4qk0p05qa17iq31f771rocg4" -d "grant_type=client_credentials" https://sb-use1-overledger-1.auth.us-east-1.amazoncognito.com/token
-          $TOKEN_NAME = jq -r '.access_token'
+          curl -X POST -u "r0ha1jskkoeus11vm5616timb:ievds2o7vmc22drlns0st2d6kaf4qk0p05qa17iq31f771rocg4" -d "grant_type=client_credentials" https://sb-use1-overledger-1.auth.us-east-1.amazoncognito.com/token | jq -r '.access_token'
       - name: Get the Documentation Yaml File
         env:
-          GH_TOKEN: ${{ steps.generate_token.outputs.token }}
+          GH_TOKEN: ${{ steps.generate_token.outputs }}
         run: |
-          curl -o doc.json https://api.sandbox.overledger.io/documentation/ --header 'Authorization: Bearer ${{ TOKEN_NAME }}' 
+          curl -o doc.json https://api.sandbox.overledger.io/documentation/ --header 'Authorization: Bearer ${{ steps.generate_token.outputs.access_token }}' 
           yq r -j doc.json > openapi.yaml
       - name: Build and publish API documentation
         env:
