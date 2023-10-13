@@ -43,7 +43,7 @@ jobs:
       - name: Get the Documentation Yaml File
         run: |
           api_token="${{ steps.extract-token.outputs.API_TOKEN }}"
-          curl -o doc.json https://api.sandbox.overledger.io/documentation/ --header "Authorization: Bearer $api_token" 
+          curl -o doc.json https://api.sandbox.overledger.io/v2/documentation/service/Overledger%20Core%20API/ --header "Authorization: Bearer $api_token" 
           yq r -j doc.json > openapi.yaml
         env:
           API_TOKEN: ${{ steps.extract-token.outputs.API_TOKEN }}
