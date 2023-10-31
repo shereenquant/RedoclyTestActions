@@ -33,6 +33,6 @@ jobs:
           yq r -j doc.json > openapi.yaml
       - name: Build and publish API documentation
         env:
-          REDOCLY_AUTHORIZATION: ${{ secrets.TEST_AUTOMATED_PIPELINE }}
+          REDOCLY_AUTHORIZATION: ${{ secrets.TEST_KEY }}
         run: |
-          npx @redocly/cli@latest push openapi.yaml --destination="API Docs Testing@V2.0" --organization="quant-network"
+          npx @redocly/cli@latest push openapi.yaml --destination="Test@v2" --organization="test-bjg"
